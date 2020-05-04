@@ -62,7 +62,6 @@ Vælg nedenfor hvilke ting du ønsker til din carport:
             </div>
         </div>
 
-
         <div class="col-md-5 school-options-dropdown text-center">
             <div class="form-group">
                 <label>Vælg materiale til carport</label>
@@ -70,6 +69,18 @@ Vælg nedenfor hvilke ting du ønsker til din carport:
                     <option selected disabled>Carport materiale</option>
                     <c:forEach var="material" items="${material}">
                         <option name="material">${material.name}</option>
+                    </c:forEach>
+                </select>
+            </div>
+        </div>
+
+        <div class="col-md-5 school-options-dropdown text-center">
+            <div class="form-group">
+                <label>Vælg hældning på tag:</label>
+                <select class="form-control" name="slope">
+                    <option selected disabled>Hældning</option>
+                    <c:forEach var="slope" items="${slope}">
+                        <option name="slope">${slope.name}</option>
                     </c:forEach>
                 </select>
             </div>

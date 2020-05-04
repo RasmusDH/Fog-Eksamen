@@ -64,30 +64,6 @@ Vælg nedenfor hvilke ting du ønsker til din carport:
 
         <div class="col-md-5 school-options-dropdown text-center">
             <div class="form-group">
-                <label>Vælg fladt eller rejsning på tag:</label>
-                <select class="form-control" name="kind">
-                    <option selected disabled>Tag type</option>
-                    <c:forEach var="kind" items="${kind}">
-                        <option name="kind">${kind.name}</option>
-                    </c:forEach>
-                </select>
-            </div>
-        </div>
-
-        <div class="col-md-5 school-options-dropdown text-center">
-            <div class="form-group">
-                <label>Vælg hældning på tag:</label>
-                <select class="form-control" name="slope">
-                    <option selected disabled>Hældning</option>
-                    <c:forEach var="slope" items="${slope}">
-                        <option name="slope">${slope.name}</option>
-                    </c:forEach>
-                </select>
-            </div>
-        </div>
-
-        <div class="col-md-5 school-options-dropdown text-center">
-            <div class="form-group">
                 <label>Vælg længde på skur:</label>
                 <select class="form-control" name="length">
                     <option selected disabled>Skur længde</option>

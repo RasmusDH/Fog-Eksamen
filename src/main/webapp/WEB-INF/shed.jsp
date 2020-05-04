@@ -23,16 +23,24 @@
 </head>
 <body>
 
-Kunne du tænke dig en carport med eller uden et skur til?
+Hvordan skal din carport være?
 
 <br> <br>
 
 <button>
-    <a href="FrontController?target=redirect&destination=roof">Med skur</a>
+    <a href="FrontController?target=redirect&destination=customWithShed">Med skur med fladt tag</a>
 </button>
 
 <button>
-    <a href="FrontController?target=redirect&destination=roof">Uden skur</a>
+    <a href="FrontController?target=redirect&destination=customRoofFlat">Uden skur med fladt tag</a>
+</button>
+
+<button>
+    <a href="FrontController?target=redirect&destination=customRoofSlope">Med skur med vinkeltag</a>
+</button>
+
+<button>
+    <a href="FrontController?target=redirect&destination=custom">Uden skur med vinkeltag</a>
 </button>
 
 </body>
