@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="Fog-Eksamen-master" />
+        <module name="Projektskabelon" />
+        <module name="ProjektSkabelon-master" />
+        <module name="prejektSkabelon" />
+        <module name="Fog-Eksamen" />
+        <module name="Projektskabelon-master" />
+        <module name="FOG-CarportProjekt" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="FOG-CarportProjekt" options="-endorseddirs /Users/andreas/Downloads/Fog-Eksamen/target/endorsed" />
+      <module name="Fog-Eksamen" options="-endorseddirs /Users/andreas/Downloads/Fog-Eksamen-master/target/endorsed" />
+      <module name="Fog-Eksamen-master" options="-endorseddirs /Users/andreas/Downloads/Fog-Eksamen/target/endorsed" />
+      <module name="ProjektSkabelon-master" options="-endorseddirs &quot;/Users/andreas/Downloads/Fog-Eksamen/target/endorsed&quot;" />
+      <module name="Projektskabelon" options="-endorseddirs /Users/andreas/Downloads/Fog-Eksamen/target/endorsed" />
+      <module name="Projektskabelon-master" options="-endorseddirs /Users/andreas/Downloads/Fog-Eksamen/target/endorsed" />
+      <module name="prejektSkabelon" options="-endorseddirs &quot;/Users/andreas/Downloads/Fog-Eksamen/target/endorsed&quot;" />
+    </option>
+  </component>
+</project>
