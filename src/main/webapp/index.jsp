@@ -11,13 +11,14 @@
     <%!
         @Override
         public void jspInit(){
-            Initializer.initMaterials();
+            Initializer.initMaterialList();
             Initializer.initMeasurements();
         }
+
     %>
 
     <%
-        request.setAttribute("materials", Initializer.getMaterialList());
+        request.setAttribute("materials", Initializer.initMaterialList());
         request.setAttribute("measureWidths", Initializer.getMeasurementWidth());
         request.setAttribute("measureLengths", Initializer.getMeasurementLength());
         request.setAttribute("measureShedLengths", Initializer.getMeasurementShedLength());

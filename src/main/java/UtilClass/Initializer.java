@@ -6,11 +6,13 @@ import DBAccess.MaterialMapper;
 import DBAccess.MeasurementMapper;
 import DBAccess.UserMapper;
 import FunctionLayer.*;
+import sun.rmi.runtime.Log;
 
 import java.util.List;
 
 
 public class Initializer {
+
     private static String width = "width";
     private static String lengthMeasure = "length";
     private static String shedWitdh = "shed width";
@@ -21,14 +23,15 @@ public class Initializer {
     private static List<Measurement> measurementShedLength;
     private static List<Measurement> measurementShedWidth;
 
-    public static void initMaterials() {
+
+    public static List<Material> initMaterialList() {
         if (materialList == null){
-            materialList = MaterialMapper.getMaterial();
+            try {
+                materialList = MaterialMapper.getMaterial();
+            } catch (Exception e){
+                e.printStackTrace();
+            }
         }
-    }
-
-    public static List<Material> getMaterialList(){
-
         return materialList;
     }
     public static void initMeasurements() {

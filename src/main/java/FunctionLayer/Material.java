@@ -14,7 +14,7 @@ public class Material {
         return name;
     }
 
-    public void setName(String material) {
+    public void setName(String name) {
         this.name = name;
     }
 

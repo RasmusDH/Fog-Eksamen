@@ -12,7 +12,7 @@ public class Redirect extends Command {
         String destination = request.getParameter("destination");
 
         if(destination.equals("customWithShed")) {
-            request.setAttribute("materials", Initializer.getMaterialList());
+            request.setAttribute("materials", Initializer.initMaterialList());
         }
 
         return destination;

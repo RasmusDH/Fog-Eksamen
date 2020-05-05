@@ -1,4 +1,4 @@
-<%--
+<%@ page import="UtilClass.Initializer" %><%--
   Created by IntelliJ IDEA.
   User: emilie
   Date: 20/04/2020
@@ -23,6 +23,20 @@
     <!-- Header -->
     <%@include file="/header/header.inc"%>
 
+    <!-- Stylesheet -->
+    <link rel = "stylesheet"
+          type = "text/css"
+          href = "css/dropdown.css" />
+
+    <%
+        if (request.getServletContext().getAttribute("materialList") == null){
+            request.getServletContext().setAttribute("materialList", Initializer.initMaterialList());
+        }
+        if (request.getServletContext().getAttribute("measurementList") == null){
+            request.getServletContext().setAttribute("measurementList", Initializer.getMeasurementLength());
+        }
+    %>
+
     <title>Carport design</title>
 </head>
 <body>
@@ -30,6 +44,7 @@
 
 Her kan du designe din egen carport med dine egne mål og tilføjelser.
 Vælg nedenfor hvilke ting du ønsker til din carport:
+Med skur uden taghældning
 
 <!-- Dropdowns -->
 
@@ -86,17 +101,19 @@ Vælg nedenfor hvilke ting du ønsker til din carport:
             </div>
         </div>
 
-        <div class="col-md-5 school-options-dropdown text-center">
+        <div class="col-md-5 school-options-dropdown text-center text-black-50">
             <div class="form-group">
-                <label>Vælg materiale til carport</label>
-                <select class="form-control" name="materials">
+                <label for="exampleFormControlSelect1">Vælg materiale til carport</label>
+                <select class="form-control" name="materials" id="exampleFormControlSelect1">
                     <option selected disabled>Carport materiale</option>
-                    <c:forEach var="material" items="${materials}">
-                        <option name="materials">${material.name}</option>
+                    <c:forEach var="material" items="${applicationScope.materialList}">
+                        <option value="${material.name}"></option>
                     </c:forEach>
                 </select>
             </div>
         </div>
+
+
 
         <div class="col-md-5 school-options-dropdown text-center">
             <div class="form-group">
@@ -130,7 +147,8 @@ Vælg nedenfor hvilke ting du ønsker til din carport:
 </div>
 
 
+
 </body>
-<!-- Footer -->
+                        <!-- Footer -->
 <%@include file="/header/footer.inc"%>
 </html>

@@ -14,7 +14,9 @@ public class MeasurementMapper {
     private String lengthMeasure = "length";
     private String shedWitdh = "shed width";
     private String shedLength = "shed length";
+
     public static ArrayList<Measurement> getMeasurementsWidth(String width) {
+
 
         ArrayList<Measurement> measurementListWidth = new ArrayList<>();
 
