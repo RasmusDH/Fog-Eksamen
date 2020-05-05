@@ -18,16 +18,33 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class CustomOrderWithShed extends Command {
-
+    private String width = "width";
+    private String lengthMeasure = "length";
+    private String shedWidth = "shed width";
+    private String shedLength = "shed length";
     //static OrderItem orderItem = null;
     @Override
     String execute(HttpServletRequest request, HttpServletResponse response) {
         HttpSession session = request.getSession();
 
+
         ArrayList<Material> materials = MaterialMapper.getMaterial();
+        ArrayList<Measurement> measureWidth = MeasurementMapper.getMeasurementsWidth(width);
+        ArrayList<Measurement> measureLength = MeasurementMapper.getMeasurementsLength(lengthMeasure);
+        ArrayList<Measurement> measureShedWidth = MeasurementMapper.getMeasurementsShedWidth(shedWidth);
+        ArrayList<Measurement> measureShedLength = MeasurementMapper.getMeasurementsShedLength(shedLength);
+        System.out.println(measureShedWidth);
+        System.out.println(measureWidth);
         System.out.println(materials);
+        System.out.println(measureLength);
+        System.out.println(measureShedLength);
 
 
+
+        request.setAttribute("measureLengths", measureLength);
+        request.setAttribute("measureWidths", measureWidth);
+        request.setAttribute("measureShedLengths", measureShedLength);
+        request.setAttribute("measureShedWidths", measureShedWidth);
         request.setAttribute("del 6", materials);
         request.setAttribute("materials", materials);
 

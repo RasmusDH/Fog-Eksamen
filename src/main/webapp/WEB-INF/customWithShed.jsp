@@ -41,10 +41,10 @@ Vælg nedenfor hvilke ting du ønsker til din carport:
         <div class="col-md-5 school-options-dropdown text-center">
             <div class="form-group">
                 <label>Vælg Carport længde:</label>
-                <select class="form-control" name="length">
+                <select class="form-control" name="measureLengths">
                     <option selected disabled>Carport længde</option>
-                    <c:forEach var="length" items="${length}">
-                        <option name="length">${length.name}</option>
+                    <c:forEach var="measureLength" items="${measureLengths}">
+                        <option name="measureLengths">${measureLengths.name}</option>
                     </c:forEach>
                 </select>
             </div>
@@ -53,10 +53,10 @@ Vælg nedenfor hvilke ting du ønsker til din carport:
         <div class="col-md-5 school-options-dropdown text-center">
             <div class="form-group">
                 <label>Vælg Carport bredde:</label>
-                <select class="form-control" name="with">
+                <select class="form-control" name="measureWidths">
                     <option selected disabled>Carport bredde</option>
-                    <c:forEach var="with" items="${with}">
-                        <option name="with">${with.name}</option>
+                    <c:forEach var="measureWidth" items="${measureWidths}">
+                        <option name="measureWidths">${measureWidths.name}</option>
                     </c:forEach>
                 </select>
             </div>
@@ -65,10 +65,10 @@ Vælg nedenfor hvilke ting du ønsker til din carport:
         <div class="col-md-5 school-options-dropdown text-center">
             <div class="form-group">
                 <label>Vælg længde på skur:</label>
-                <select class="form-control" name="length">
+                <select class="form-control" name="measureShedLengths">
                     <option selected disabled>Skur længde</option>
-                    <c:forEach var="length" items="${length}">
-                        <option name="length">${length.name}</option>
+                    <c:forEach var="measureShedLength" items="${measureShedLengths}">
+                        <option name="measureShedLengths">${measureShedLength.name}</option>
                     </c:forEach>
                 </select>
             </div>
@@ -77,10 +77,10 @@ Vælg nedenfor hvilke ting du ønsker til din carport:
         <div class="col-md-5 school-options-dropdown text-center">
             <div class="form-group">
                 <label>Vælg bredde på skur:</label>
-                <select class="form-control" name="with">
+                <select class="form-control" name="measureShedWidths">
                     <option selected disabled>Skur bredde</option>
-                    <c:forEach var="with" items="${with}">
-                        <option name="with">${with.name}</option>
+                    <c:forEach var="measureShedWidth" items="${measureShedWidths}">
+                        <option name="measureShedWidths">${measureShedWidth.name}</option>
                     </c:forEach>
                 </select>
             </div>
@@ -101,10 +101,10 @@ Vælg nedenfor hvilke ting du ønsker til din carport:
         <div class="col-md-5 school-options-dropdown text-center">
             <div class="form-group">
                 <label>Vælg materiale til tag</label>
-                <select class="form-control" name="materials">
+                <select class="form-control" name="del 6">
                     <option selected disabled>Tag materiale</option>
-                    <c:forEach var="material" items="${material}">
-                        <option name="materials">${materials.name}</option>
+                    <c:forEach var="material" items="${materials}">
+                        <option name="del 6">${material.name}</option>
                     </c:forEach>
                 </select>
             </div>

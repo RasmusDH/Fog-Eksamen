@@ -12,11 +12,16 @@
         @Override
         public void jspInit(){
             Initializer.initMaterials();
+            Initializer.initMeasurements();
         }
     %>
 
     <%
         request.setAttribute("materials", Initializer.getMaterialList());
+        request.setAttribute("measureWidths", Initializer.getMeasurementWidth());
+        request.setAttribute("measureLengths", Initializer.getMeasurementLength());
+        request.setAttribute("measureShedLengths", Initializer.getMeasurementShedLength());
+        request.setAttribute("measureShedWidths", Initializer.getMeasurementShedWidth());
     %>
     <!-- Header -->
     <%@include file="header/header.inc"%>
