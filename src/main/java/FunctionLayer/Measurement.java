@@ -18,8 +18,7 @@ public class Measurement {
         return measurement;
     }
 
-    public void setMeasurement(int length) {
-
+    public void setMeasurement(int measurement) {
         this.measurement = measurement;
     }
 

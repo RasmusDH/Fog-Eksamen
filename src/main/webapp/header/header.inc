@@ -25,7 +25,7 @@
     </div>
 <!-- Overskrift -->
     <div class="col">
-        <h1> Johannes Fog - Trælast & Byggecenter</h1>
+        <h1 text-center> Johannes Fog - Trælast & Byggecenter</h1>
     </div>
 
 </div>

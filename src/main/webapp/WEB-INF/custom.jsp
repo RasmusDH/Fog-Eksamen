@@ -89,10 +89,10 @@ Vælg nedenfor hvilke ting du ønsker til din carport:
         <div class="col-md-5 school-options-dropdown text-center">
             <div class="form-group">
                 <label>Vælg materiale til tag</label>
-                <select class="form-control" name="material">
+                <select class="form-control" name="materials">
                     <option selected disabled>Tag materiale</option>
                     <c:forEach var="material" items="${material}">
-                        <option name="material">${material.name}</option>
+                        <option name="materials">${materials.name}</option>
                     </c:forEach>
                 </select>
             </div>

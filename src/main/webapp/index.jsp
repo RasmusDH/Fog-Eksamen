@@ -9,10 +9,6 @@
 <html>
 <head>
     <%!
-        @Override
-        public void jspInit(){
-            Initializer.initMaterials();
-        }
     %>
 
     <%

@@ -1,4 +1,4 @@
-<%--
+<%@ page import="UtilClass.Initializer" %><%--
   Created by IntelliJ IDEA.
   User: emilie
   Date: 20/04/2020
@@ -23,6 +23,20 @@
     <!-- Header -->
     <%@include file="/header/header.inc"%>
 
+    <!-- Stylesheet -->
+    <link rel = "stylesheet"
+          type = "text/css"
+          href = "css/dropdown.css" />
+
+    <%
+        if (request.getServletContext().getAttribute("materialList") == null){
+            request.getServletContext().setAttribute("materialList", Initializer.getMaterialList());
+        }
+        if (request.getServletContext().getAttribute("measurementList") == null){
+            request.getServletContext().setAttribute("measurementList", Initializer.getMeasurementList());
+        }
+    %>
+
     <title>Carport design</title>
 </head>
 <body>
@@ -30,6 +44,7 @@
 
 Her kan du designe din egen carport med dine egne mål og tilføjelser.
 Vælg nedenfor hvilke ting du ønsker til din carport:
+Med skur uden taghældning
 
 <!-- Dropdowns -->
 
@@ -76,35 +91,37 @@ Vælg nedenfor hvilke ting du ønsker til din carport:
 
         <div class="col-md-5 school-options-dropdown text-center">
             <div class="form-group">
-                <label>Vælg bredde på skur:</label>
-                <select class="form-control" name="with">
+                <label for="exampleFormControlSelect3">Vælg bredde til skur</label>
+                <select class="form-control" name="measurement" id="exampleFormControlSelect3">
                     <option selected disabled>Skur bredde</option>
-                    <c:forEach var="with" items="${with}">
-                        <option name="with">${with.name}</option>
+                    <c:forEach var="measurements" items="${applicationScope.measurementList}">
+                        <option value=${measurements.measurement}></option>
                     </c:forEach>
                 </select>
             </div>
         </div>
 
-        <div class="col-md-5 school-options-dropdown text-center">
+        <div class="col-md-5 school-options-dropdown text-center text-black-50">
             <div class="form-group">
-                <label>Vælg materiale til carport</label>
-                <select class="form-control" name="materials">
+                <label for="exampleFormControlSelect1">Vælg materiale til carport</label>
+                <select class="form-control" name="material" id="exampleFormControlSelect1">
                     <option selected disabled>Carport materiale</option>
-                    <c:forEach var="material" items="${materials}">
-                        <option name="materials">${material.name}</option>
+                    <c:forEach var="materials" items="${applicationScope.materialList}">
+                        <option value="${materials.name}"></option>
                     </c:forEach>
                 </select>
             </div>
         </div>
 
+
+
         <div class="col-md-5 school-options-dropdown text-center">
-            <div class="form-group">
-                <label>Vælg materiale til tag</label>
-                <select class="form-control" name="materials">
+            <div class="form-group text-dark">
+                <label for="exampleFormControlSelect2">Vælg materiale til tag</label>
+                <select class="form-control" name="material" id="exampleFormControlSelect2">
                     <option selected disabled>Tag materiale</option>
-                    <c:forEach var="material" items="${material}">
-                        <option name="materials">${materials.name}</option>
+                    <c:forEach var="materials" items="${applicationScope.materialList}">
+                        <option value=${materials.name}></option>
                     </c:forEach>
                 </select>
             </div>
