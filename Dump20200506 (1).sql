@@ -43,28 +43,6 @@ INSERT INTO `billofmaterials` VALUES (1,'25x200 mm. trykimp. Brædt',360,4,'stk.
 UNLOCK TABLES;
 
 --
--- Table structure for table `materials`
---
-
-DROP TABLE IF EXISTS `materials`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `materials` (
-  `kind` varchar(20) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `materials`
---
-
-LOCK TABLES `materials` WRITE;
-/*!40000 ALTER TABLE `materials` DISABLE KEYS */;
-INSERT INTO `materials` VALUES ('Mahogany'),('Gumpole'),('Spruce'),('Birch'),('Oak'),('Pine');
-/*!40000 ALTER TABLE `materials` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `measurements`
 --
 
@@ -84,7 +62,7 @@ CREATE TABLE `measurements` (
 
 LOCK TABLES `measurements` WRITE;
 /*!40000 ALTER TABLE `measurements` DISABLE KEYS */;
-INSERT INTO `measurements` VALUES ('width',270,'cm'),('width',300,'cm'),('width',330,'cm'),('width',360,'cm'),('width',390,'cm'),('width',420,'cm'),('width',480,'cm'),('width',510,'cm'),('width',540,'cm'),('width',570,'cm'),('width',600,'cm'),('width',630,'cm'),('width',660,'cm'),('width',690,'cm'),('width',720,'cm'),('width',750,'cm'),('width',450,'cm'),('width',240,'cm'),('length',240,'cm'),('length',270,'cm'),('length',300,'cm'),('length',330,'cm'),('length',360,'cm'),('length',390,'cm'),('length',420,'cm'),('length',450,'cm'),('length',480,'cm'),('length',510,'cm'),('length',540,'cm'),('length',570,'cm'),('length',600,'cm'),('length',630,'cm'),('length',660,'cm'),('length',690,'cm'),('length',720,'cm'),('length',750,'cm'),('length',780,'cm'),('shed width',210,'cm'),('shed width',240,'cm'),('shed width',270,'cm'),('shed width',300,'cm'),('shed width',330,'cm'),('shed width',360,'cm'),('shed width',390,'cm'),('shed width',420,'cm'),('shed width',450,'cm'),('shed width',480,'cm'),('shed width',510,'cm'),('shed width',540,'cm'),('shed width',570,'cm'),('shed width',600,'cm'),('shed width',630,'cm'),('shed width',660,'cm'),('shed width',690,'cm'),('shed width',720,'cm'),('shed length',150,'cm'),('shed length',180,'cm'),('shed length',210,'cm'),('shed length',240,'cm'),('shed length',270,'cm'),('shed length',300,'cm'),('shed length',330,'cm'),('shed length',360,'cm'),('shed length',390,'cm'),('shed length',420,'cm'),('shed length',450,'cm'),('shed length',480,'cm'),('shed length',510,'cm'),('shed length',540,'cm'),('shed length',570,'cm'),('shed length',600,'cm'),('shed length',630,'cm'),('shed length',660,'cm'),('shed length',690,'cm'),('width',270,'cm'),('width',300,'cm'),('width',330,'cm'),('width',360,'cm'),('width',390,'cm'),('width',420,'cm'),('width',480,'cm'),('width',510,'cm'),('width',540,'cm'),('width',570,'cm'),('width',600,'cm'),('width',630,'cm'),('width',660,'cm'),('width',690,'cm'),('width',720,'cm'),('width',750,'cm'),('width',450,'cm'),('width',240,'cm'),('length',240,'cm'),('length',270,'cm'),('length',300,'cm'),('length',330,'cm'),('length',360,'cm'),('length',390,'cm'),('length',420,'cm'),('length',450,'cm'),('length',480,'cm'),('length',510,'cm'),('length',540,'cm'),('length',570,'cm'),('length',600,'cm'),('length',630,'cm'),('length',660,'cm'),('length',690,'cm'),('length',720,'cm'),('length',750,'cm'),('length',780,'cm'),('shed width',210,'cm'),('shed width',240,'cm'),('shed width',270,'cm'),('shed width',300,'cm'),('shed width',330,'cm'),('shed width',360,'cm'),('shed width',390,'cm'),('shed width',420,'cm'),('shed width',450,'cm'),('shed width',480,'cm'),('shed width',510,'cm'),('shed width',540,'cm'),('shed width',570,'cm'),('shed width',600,'cm'),('shed width',630,'cm'),('shed width',660,'cm'),('shed width',690,'cm'),('shed width',720,'cm'),('shed length',150,'cm'),('shed length',180,'cm'),('shed length',210,'cm'),('shed length',240,'cm'),('shed length',270,'cm'),('shed length',300,'cm'),('shed length',330,'cm'),('shed length',360,'cm'),('shed length',390,'cm'),('shed length',420,'cm'),('shed length',450,'cm'),('shed length',480,'cm'),('shed length',510,'cm'),('shed length',540,'cm'),('shed length',570,'cm'),('shed length',600,'cm'),('shed length',630,'cm'),('shed length',660,'cm'),('shed length',690,'cm');
+INSERT INTO `measurements` VALUES ('width',270,'cm'),('width',300,'cm'),('width',330,'cm'),('width',360,'cm'),('width',390,'cm'),('width',420,'cm'),('width',480,'cm'),('width',510,'cm'),('width',540,'cm'),('width',570,'cm'),('width',600,'cm'),('width',630,'cm'),('width',660,'cm'),('width',690,'cm'),('width',720,'cm'),('width',750,'cm'),('width',450,'cm'),('width',240,'cm'),('length',240,'cm'),('length',270,'cm'),('length',300,'cm'),('length',330,'cm'),('length',360,'cm'),('length',390,'cm'),('length',420,'cm'),('length',450,'cm'),('length',480,'cm'),('length',510,'cm'),('length',540,'cm'),('length',570,'cm'),('length',600,'cm'),('length',630,'cm'),('length',660,'cm'),('length',690,'cm'),('length',720,'cm'),('length',750,'cm'),('length',780,'cm'),('shed width',210,'cm'),('shed width',240,'cm'),('shed width',270,'cm'),('shed width',300,'cm'),('shed width',330,'cm'),('shed width',360,'cm'),('shed width',390,'cm'),('shed width',420,'cm'),('shed width',450,'cm'),('shed width',480,'cm'),('shed width',510,'cm'),('shed width',540,'cm'),('shed width',570,'cm'),('shed width',600,'cm'),('shed width',630,'cm'),('shed width',660,'cm'),('shed width',690,'cm'),('shed width',720,'cm'),('shed length',150,'cm'),('shed length',180,'cm'),('shed length',210,'cm'),('shed length',240,'cm'),('shed length',270,'cm'),('shed length',300,'cm'),('shed length',330,'cm'),('shed length',360,'cm'),('shed length',390,'cm'),('shed length',420,'cm'),('shed length',450,'cm'),('shed length',480,'cm'),('shed length',510,'cm'),('shed length',540,'cm'),('shed length',570,'cm'),('shed length',600,'cm'),('shed length',630,'cm'),('shed length',660,'cm'),('shed length',690,'cm');
 /*!40000 ALTER TABLE `measurements` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -143,4 +121,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-05-06 12:05:59
+-- Dump completed on 2020-05-06 13:18:32
