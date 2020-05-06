@@ -43,6 +43,28 @@ INSERT INTO `billofmaterials` VALUES (1,'25x200 mm. trykimp. Brædt',360,4,'stk.
 UNLOCK TABLES;
 
 --
+-- Table structure for table `materials`
+--
+
+DROP TABLE IF EXISTS `materials`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `materials` (
+  `kind` varchar(20) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `materials`
+--
+
+LOCK TABLES `materials` WRITE;
+/*!40000 ALTER TABLE `materials` DISABLE KEYS */;
+INSERT INTO `materials` VALUES ('Mahogany'),('Gumpole'),('Spruce'),('Birch'),('Oak'),('Pine');
+/*!40000 ALTER TABLE `materials` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `measurements`
 --
 
@@ -121,4 +143,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-05-06 13:18:32
+-- Dump completed on 2020-05-06 13:25:12
