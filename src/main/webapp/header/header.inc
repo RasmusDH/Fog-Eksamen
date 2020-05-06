@@ -34,6 +34,6 @@
 <div class="topnav">
     <a class="active" href="FrontController?target=redirect&destination=index">Home</a>
     <a href= "FrontController?target=redirect&destination=about"">About FOG</a>
-    <a href="FrontController?target=redirect&destination=custom">Carports</a>
+    <a href="FrontController?target=redirect&destination=options">Carports</a>
     <a href="FrontController?target=redirect&destination=basket">Basket</a>
 </div>
