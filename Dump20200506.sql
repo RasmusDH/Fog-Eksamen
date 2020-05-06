@@ -1,6 +1,4 @@
-CREATE DATABASE  IF NOT EXISTS `fog` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
-USE `fog`;
--- MySQL dump 10.13  Distrib 8.0.18, for macos10.14 (x86_64)
+-- MySQL dump 10.13  Distrib 8.0.18, for Win64 (x86_64)
 --
 -- Host: localhost    Database: fog
 -- ------------------------------------------------------
@@ -25,13 +23,13 @@ DROP TABLE IF EXISTS `billofmaterials`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `billofmaterials` (
-  `material id` int(11) NOT NULL AUTO_INCREMENT,
+  `materialId` int(255) NOT NULL,
   `type` varchar(255) DEFAULT NULL,
   `length` int(11) DEFAULT NULL,
   `amount` int(11) DEFAULT NULL,
   `unit` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`material id`)
-) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  PRIMARY KEY (`materialId`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -40,7 +38,7 @@ CREATE TABLE `billofmaterials` (
 
 LOCK TABLES `billofmaterials` WRITE;
 /*!40000 ALTER TABLE `billofmaterials` DISABLE KEYS */;
-INSERT INTO `billofmaterials` VALUES (1,'25x200 mm. trykimp. Brædt',360,4,'stk.'),(2,'38x73 mm. Lægte ubh.',420,1,'stk.'),(3,'45x95 mm. Regular ub.',270,12,'stk.'),(4,'45x195 mm. spærtræ ubh.',600,2,'stk.'),(5,'97x97 mm. trykimp. Stolpe',300,11,'stk.'),(6,'Plastmo Ecolite blåtonet',600,6,'stk.'),(7,'Plastmo bundskruer 200stk',0,3,'pakke'),(8,'Hulbånd 1x20 mm. 10 mtr',0,2,'rulle'),(9,'Universal højre',190,15,'stk.'),(10,'Universal venstre ',190,15,'stk.'),(11,'Skruer 4,5 x 50 mm. ',200,1,'pakke'),(12,'Beslagskruer 4,5 x 500 mm. ',250,3,'pakke'),(13,'Bræddebolt',10,18,'stk.'),(14,'Firkantskiver 40x40x11 mm ',0,12,'stk.'),(15,'Skruer 400 stk, 4,5 x 70 mm',0,2,'pk.'),(16,'Skruer 300 stk, 4,5 x 50 mm',0,2,'pk.'),(17,'Stalddørsgreb 50x75',0,1,'sæt'),(18,'T-hængsel 390 mm',0,2,'stk.'),(19,'Vinkelbeslag 35',0,32,'stk.');
+INSERT INTO `billofmaterials` VALUES (1,'25x200 mm. trykimp. Brædt',360,4,'stk.'),(2,'25x200 mm. trykimp. Brædt',540,4,'stk.'),(3,'25x125 mm. trykimp. Brædt',360,2,'stk.'),(4,'25x125 mm. trykimp. Brædt',540,4,'stk'),(5,'38x73 mm. Lægte ubh.',420,1,'stk.'),(6,'45x95 mm. Regular ub.',270,12,'stk.'),(7,'45x95 mm. Regular ub.',240,4,'stk.'),(8,'45x195 mm. spærtræ ubh.',600,2,'stk.'),(9,'45x195 mm. spærtræ ubh.',480,1,'stk.'),(10,'45x195 mm. spærtræ ubh.',600,15,'stk.'),(11,'97x97 mm. trykimp. Stolpe',300,11,'stk.'),(12,'19x100 mm trykimp. Brædt',210,200,'stk.'),(13,'19x100 mm trykimp. Brædt',540,4,'stk.'),(14,'19x100 mm trykimp. Brædt',360,2,'stk.'),(15,'Plastmo Ecolite blåtonet',600,6,'stk.'),(16,'Plastmo Ecolite blåtonet',360,6,'stk.'),(17,'Plastmo bundskruer 200stk',0,3,'pakke'),(18,'Hulbånd 1x20 mm. 10 mtr',0,2,'rulle'),(19,'Universal 190mm højre',0,15,'stk.'),(20,'Universal 190mm venstre',0,15,'stk.'),(21,'4,5 x 60 mm skruer 200 stk',0,1,'pakke'),(22,'4,0 x 50mm beslagskruser 250 stk.',0,3,'pakke'),(23,'bræddebolt 10 x 120mm.',0,18,'stk.'),(24,'Firkantskiver 40x40x11 mm ',0,12,'stk.'),(25,'4,5 x 70 mm. skruer 400 stk',0,2,'pk.'),(26,'4,5 x 50 mm. skruer 300 stk',0,2,'pakke'),(27,'Stalddørsgreb 50x75',0,1,'sæt'),(28,'T-hængsel 390 mm',0,2,'stk.'),(29,'Vinkelbeslag 35',0,32,'stk.');
 /*!40000 ALTER TABLE `billofmaterials` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -145,4 +143,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-04-29 17:08:48
+-- Dump completed on 2020-05-06 12:05:59
