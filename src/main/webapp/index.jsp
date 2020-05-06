@@ -38,7 +38,7 @@
     <title>Fog</title>
 </head>
 <body>
-<a href="FrontController?target=redirect&destination=shed">Design your carport here</a>
+<a href="FrontController?target=redirect&destination=options">Design your carport here</a>
 </body>
 </html>
 <!-- Footer -->
