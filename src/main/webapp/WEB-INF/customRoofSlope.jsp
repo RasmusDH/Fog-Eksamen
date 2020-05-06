@@ -23,6 +23,10 @@
     <!-- Header -->
     <%@include file="/header/header.inc"%>
 
+    <%
+        
+    %>
+
     <title>Carport design</title>
 </head>
 <body>

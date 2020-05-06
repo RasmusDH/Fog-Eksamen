@@ -18,13 +18,13 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="FOG-CarportProjekt" options="-endorseddirs /Users/andreas/Downloads/Fog-Eksamen/target/endorsed" />
-      <module name="Fog-Eksamen" options="-endorseddirs /Users/andreas/Downloads/Fog-Eksamen-master/target/endorsed" />
-      <module name="Fog-Eksamen-master" options="-endorseddirs /Users/andreas/Downloads/Fog-Eksamen/target/endorsed" />
-      <module name="ProjektSkabelon-master" options="-endorseddirs &quot;/Users/andreas/Downloads/Fog-Eksamen/target/endorsed&quot;" />
-      <module name="Projektskabelon" options="-endorseddirs /Users/andreas/Downloads/Fog-Eksamen/target/endorsed" />
-      <module name="Projektskabelon-master" options="-endorseddirs /Users/andreas/Downloads/Fog-Eksamen/target/endorsed" />
-      <module name="prejektSkabelon" options="-endorseddirs &quot;/Users/andreas/Downloads/Fog-Eksamen/target/endorsed&quot;" />
+      <module name="FOG-CarportProjekt" options="-endorseddirs $PROJECT_DIR$/../../../andreas/Downloads/Fog-Eksamen/target/endorsed" />
+      <module name="Fog-Eksamen" options="-endorseddirs $PROJECT_DIR$/../../../andreas/Downloads/Fog-Eksamen-master/target/endorsed" />
+      <module name="Fog-Eksamen-master" options="-endorseddirs $PROJECT_DIR$/../../../andreas/Downloads/Fog-Eksamen/target/endorsed" />
+      <module name="ProjektSkabelon-master" options="-endorseddirs &quot;$PROJECT_DIR$/../../../andreas/Downloads/Fog-Eksamen/target/endorsed&quot;" />
+      <module name="Projektskabelon" options="-endorseddirs $PROJECT_DIR$/../../../andreas/Downloads/Fog-Eksamen/target/endorsed" />
+      <module name="Projektskabelon-master" options="-endorseddirs $PROJECT_DIR$/../../../andreas/Downloads/Fog-Eksamen/target/endorsed" />
+      <module name="prejektSkabelon" options="-endorseddirs &quot;$PROJECT_DIR$/../../../andreas/Downloads/Fog-Eksamen/target/endorsed&quot;" />
     </option>
   </component>
 </project>

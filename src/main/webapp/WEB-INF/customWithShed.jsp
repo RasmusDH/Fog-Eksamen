@@ -33,6 +33,15 @@
             request.getServletContext().setAttribute("materialList", Initializer.initMaterialList());
         }
         if (request.getServletContext().getAttribute("measurementList") == null){
+            request.getServletContext().setAttribute("measurementList", Initializer.getMeasurementShedWidth());
+        }
+        if (request.getServletContext().getAttribute("measurementList") == null){
+            request.getServletContext().setAttribute("measurementList", Initializer.getMeasurementShedLength());
+        }
+        if (request.getServletContext().getAttribute("measurementList") == null){
+            request.getServletContext().setAttribute("measurementList", Initializer.getMeasurementWidth());
+        }
+        if (request.getServletContext().getAttribute("measurementList") == null){
             request.getServletContext().setAttribute("measurementList", Initializer.getMeasurementLength());
         }
     %>
@@ -56,10 +65,10 @@ Med skur uden taghældning
         <div class="col-md-5 school-options-dropdown text-center">
             <div class="form-group">
                 <label>Vælg Carport længde:</label>
-                <select class="form-control" name="measureLengths">
+                <select class="form-control" name="measureLengths" id="del 1">
                     <option selected disabled>Carport længde</option>
-                    <c:forEach var="measureLength" items="${measureLengths}">
-                        <option name="measureLengths">${measureLengths.name}</option>
+                    <c:forEach var="measureLength" items="${applicationScope.measurementList}">
+                        <option value="del 1">${measureLength.measurement}</option>
                     </c:forEach>
                 </select>
             </div>
@@ -68,10 +77,10 @@ Med skur uden taghældning
         <div class="col-md-5 school-options-dropdown text-center">
             <div class="form-group">
                 <label>Vælg Carport bredde:</label>
-                <select class="form-control" name="measureWidths">
+                <select class="form-control" name="measureWidths" id="del 2">
                     <option selected disabled>Carport bredde</option>
-                    <c:forEach var="measureWidth" items="${measureWidths}">
-                        <option name="measureWidths">${measureWidths.name}</option>
+                    <c:forEach var="measureWidth" items="${applicationScope.measurementList}">
+                        <option value="del 2">${measureWidth.measurement}</option>
                     </c:forEach>
                 </select>
             </div>
@@ -80,10 +89,10 @@ Med skur uden taghældning
         <div class="col-md-5 school-options-dropdown text-center">
             <div class="form-group">
                 <label>Vælg længde på skur:</label>
-                <select class="form-control" name="measureShedLengths">
+                <select class="form-control" name="measureShedLengths" id="del 3">
                     <option selected disabled>Skur længde</option>
-                    <c:forEach var="measureShedLength" items="${measureShedLengths}">
-                        <option name="measureShedLengths">${measureShedLength.name}</option>
+                    <c:forEach var="measureShedLength" items="${applicationScope.measurementList}">
+                        <option value="del 3">${measureShedLength.measurement}</option>
                     </c:forEach>
                 </select>
             </div>
@@ -92,22 +101,22 @@ Med skur uden taghældning
         <div class="col-md-5 school-options-dropdown text-center">
             <div class="form-group">
                 <label>Vælg bredde på skur:</label>
-                <select class="form-control" name="measureShedWidths">
+                <select class="form-control" name="measureShedWidths" id="del 4">
                     <option selected disabled>Skur bredde</option>
-                    <c:forEach var="measureShedWidth" items="${measureShedWidths}">
-                        <option name="measureShedWidths">${measureShedWidth.name}</option>
+                    <c:forEach var="measureShedWidth" items="${applicationScope.measurementList}">
+                        <option value="del 4">${measureShedWidth.measurement}</option>
                     </c:forEach>
                 </select>
             </div>
         </div>
 
-        <div class="col-md-5 school-options-dropdown text-center text-black-50">
+        <div class="col-md-5 school-options-dropdown text-center">
             <div class="form-group">
-                <label for="exampleFormControlSelect1">Vælg materiale til carport</label>
-                <select class="form-control" name="materials" id="exampleFormControlSelect1">
+                <label>Vælg materiale til carport</label>
+                <select class="form-control" name="materials" id="del 5">
                     <option selected disabled>Carport materiale</option>
                     <c:forEach var="material" items="${applicationScope.materialList}">
-                        <option value="${material.name}"></option>
+                        <option value="del5">${material.name}</option>
                     </c:forEach>
                 </select>
             </div>
