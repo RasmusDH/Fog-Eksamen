@@ -65,6 +65,13 @@ public class CustomOrderWithShed extends Command {
                             shedWidth));
         }
 
+        else if (carportLength <= shedLength) {
+            request.setAttribute("status", "error");
+            request.setAttribute("message",
+                    String.format("Skur bredden er for stor!",
+                            shedWidth));
+        }
+
         else if (carportMaterial == null) {
             request.setAttribute("status", "error");
             request.setAttribute("message",
@@ -90,7 +97,7 @@ public class CustomOrderWithShed extends Command {
 
            // request.setAttribute("orderItem", orderItem);
         }
-        return "CustomOrderWithShed";
+        return "customWithShed";
     }
 
 
