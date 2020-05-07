@@ -59,10 +59,10 @@ Vælg nedenfor hvilke ting du ønsker til din carport:
         <div class="col-md-5 school-options-dropdown text-center">
             <div class="form-group">
                 <label>Vælg Carport længde:</label>
-                <select class="form-control" name="measureLengths" id="del 1">
+                <select class="form-control" name="del 1">
                     <option selected disabled>Carport længde</option>
                     <c:forEach var="measureLength" items="${applicationScope.measurementList}">
-                        <option value="del 1">${measureLength.measurement}</option>
+                        <option name="del 1">${measureLength.measurement}</option>
                     </c:forEach>
                 </select>
             </div>
@@ -71,10 +71,10 @@ Vælg nedenfor hvilke ting du ønsker til din carport:
         <div class="col-md-5 school-options-dropdown text-center">
             <div class="form-group">
                 <label>Vælg Carport bredde:</label>
-                <select class="form-control" name="measureWidths" id="del 2">
+                <select class="form-control" name="del 2">
                     <option selected disabled>Carport bredde</option>
                     <c:forEach var="measureWidth" items="${applicationScope.measurementList}">
-                        <option value="del 2">${measureWidth.measurement}</option>
+                        <option name="del 2">${measureWidth.measurement}</option>
                     </c:forEach>
                 </select>
             </div>
@@ -83,10 +83,10 @@ Vælg nedenfor hvilke ting du ønsker til din carport:
         <div class="col-md-5 school-options-dropdown text-center">
             <div class="form-group">
                 <label>Vælg materiale til carport</label>
-                <select class="form-control" name="materials" id="del 5">
+                <select class="form-control" name="del 5">
                     <option selected disabled>Carport materiale</option>
                     <c:forEach var="material" items="${applicationScope.materialList}">
-                        <option value="del5">${material.name}</option>
+                        <option name="del 5">${material.name}</option>
                     </c:forEach>
                 </select>
             </div>
