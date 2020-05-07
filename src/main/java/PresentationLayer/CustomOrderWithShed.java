@@ -52,6 +52,10 @@ public class CustomOrderWithShed extends Command {
         //Orderlist orderlist = (Orderlist) session.getAttribute("kurv");
 
         String carportMaterial = request.getParameter("del 6");
+        String length = request.getParameter("del 4");
+        System.out.println(length);
+        String material = request.getParameter("del 6");
+        System.out.println(material);
         int carportWidth = 5;
         int shedWidth = 6;
 
