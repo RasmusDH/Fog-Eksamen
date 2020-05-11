@@ -54,6 +54,7 @@ DROP TABLE IF EXISTS `constructionmaterials`;
 CREATE TABLE `constructionmaterials` (
   `materialId` int NOT NULL,
   `type` varchar(255) DEFAULT NULL,
+  `placement`varchar(255) DEFAULT NULL,
   `length` int DEFAULT NULL,
   `unit` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`materialId`)
@@ -66,7 +67,7 @@ CREATE TABLE `constructionmaterials` (
 
 LOCK TABLES `constructionmaterials` WRITE;
 /*!40000 ALTER TABLE `constructionmaterials` DISABLE KEYS */;
-INSERT INTO `constructionmaterials` VALUES (1,'25x200 mm. trykimp. Brædt',360,'stk.'),(2,'25x200 mm. trykimp. Brædt',540,'stk.'),(3,'25x125 mm. trykimp. Brædt',360,'stk.'),(4,'25x125 mm. trykimp. Brædt',540,'stk'),(5,'38x73 mm. Lægte ubh.',420,'stk.'),(6,'45x95 mm. Regular ub.',270,'stk.'),(7,'45x95 mm. Regular ub.',240,'stk.'),(8,'45x195 mm. spærtræ ubh.',600,'stk.'),(9,'45x195 mm. spærtræ ubh.',480,'stk.'),(10,'45x195 mm. spærtræ ubh.',600,'stk.'),(11,'97x97 mm. trykimp. Stolpe',300,'stk.'),(12,'19x100 mm trykimp. Brædt',210,'stk.'),(13,'19x100 mm trykimp. Brædt',540,'stk.'),(14,'19x100 mm trykimp. Brædt',360,'stk.'),(15,'Plastmo Ecolite blåtonet',600,'stk.'),(16,'Plastmo Ecolite blåtonet',360,'stk.'),(17,'Plastmo bundskruer 200stk',0,'pakke'),(18,'Hulbånd 1x20 mm. 10 mtr',0,'rulle'),(19,'Universal 190mm højre',0,'stk.'),(20,'Universal 190mm venstre',0,'stk.'),(21,'4,5 x 60 mm skruer 200 stk',0,'pakke'),(22,'4,0 x 50mm beslagskruser 250 stk.',0,'pakke'),(23,'bræddebolt 10 x 120mm.',0,'stk.'),(24,'Firkantskiver 40x40x11 mm ',0,'stk.'),(25,'4,5 x 70 mm. skruer 400 stk',0,'pk.'),(26,'4,5 x 50 mm. skruer 300 stk',0,'pakke'),(27,'Stalddørsgreb 50x75',0,'sæt'),(28,'T-hængsel 390 mm',0,'stk.'),(29,'Vinkelbeslag 35',0,'stk.');
+INSERT INTO `constructionmaterials` VALUES (1,'25x200 mm. trykimp. Brædt','skur',360,'stk.'),(2,'25x200 mm. trykimp. Brædt','skur',540,'stk.'),(3,'25x125 mm. trykimp. Brædt','skur',360,'stk.'),(4,'25x125 mm. trykimp. Brædt','skur',540,'stk'),(5,'38x73 mm. Lægte ubh.','dør',420,'stk.'),(6,'45x95 mm. Regular ub.','skur',270,'stk.'),(7,'45x95 mm. Regular ub.','skur',240,'stk.'),(8,'45x195 mm. spærtræ ubh.','tag',600,'stk.'),(9,'45x195 mm. spærtræ ubh.','tag',480,'stk.'),(10,'45x195 mm. spærtræ ubh.','tag',600,'stk.'),(11,'97x97 mm. trykimp. Stolpe','carport',300,'stk.'),(12,'19x100 mm trykimp. Brædt','skur',210,'stk.'),(13,'19x100 mm trykimp. Brædt','carport',540,'stk.'),(14,'19x100 mm trykimp. Brædt','carport',360,'stk.'),(15,'Plastmo Ecolite blåtonet','tag',600,'stk.'),(16,'Plastmo Ecolite blåtonet','tag',360,'stk.'),(17,'Plastmo bundskruer 200stk','tag',0,'pakke'),(18,'Hulbånd 1x20 mm. 10 mtr','tag',0,'rulle'),(19,'Universal 190mm højre','tag',0,'stk.'),(20,'Universal 190mm venstre','tag',0,'stk.'),(21,'4,5 x 60 mm skruer 200 stk','carport',0,'pakke'),(22,'4,0 x 50mm beslagskruser 250 stk.','tag',0,'pakke'),(23,'bræddebolt 10 x 120mm.','carport',0,'stk.'),(24,'Firkantskiver 40x40x11 mm ','carport',0,'stk.'),(25,'4,5 x 70 mm. skruer 400 stk','carport',0,'pk.'),(26,'4,5 x 50 mm. skruer 300 stk','carport',0,'pakke'),(27,'Stalddørsgreb 50x75','dør',0,'sæt'),(28,'T-hængsel 390 mm','dør',0,'stk.'),(29,'Vinkelbeslag 35','skur',0,'stk.');
 /*!40000 ALTER TABLE `constructionmaterials` ENABLE KEYS */;
 UNLOCK TABLES;
 
