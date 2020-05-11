@@ -139,12 +139,11 @@ Med skur uden taghældning
         <div class="col-md-5 school-options-dropdown text-center">
             <div class="form-group">
                 <label>Vælg materiale til tag</label>
-                <select class="form-control" name="del 6">
-                    <option selected disabled>Tag materiale</option>
-                    <c:forEach var="material" items="${materials}">
-                        <option name="del 6">${material.name}</option>
+                <select class="form-control" name="del 5">
+                    <option selected disabled>Carport tag materiale</option>
+                    <c:forEach var="material" items="${applicationScope.materialList}">
+                    <option name="del 5">${material.name}</option>
                     </c:forEach>
-                </select>
             </div>
         </div>
     </div>
