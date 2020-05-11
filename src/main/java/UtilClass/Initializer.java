@@ -4,6 +4,7 @@ package UtilClass;
 
 import DBAccess.MaterialMapper;
 import DBAccess.MeasurementMapper;
+import DBAccess.RoofMapper;
 import DBAccess.UserMapper;
 import FunctionLayer.*;
 import sun.rmi.runtime.Log;
@@ -22,6 +23,7 @@ public class Initializer {
     private static List<Measurement> measurementWidth;
     private static List<Measurement> measurementShedLength;
     private static List<Measurement> measurementShedWidth;
+    private static List<Roof> roofList;
 
 
     public static List<Material> initMaterialList() {
@@ -47,6 +49,17 @@ public class Initializer {
         if (measurementShedWidth == null){
             measurementShedWidth = MeasurementMapper.getMeasurementsShedWidth(shedWitdh);
         }
+    }
+
+    public static List<Roof> initRoofList() {
+        if (roofList == null){
+            try {
+                roofList = RoofMapper.getRoof();
+            } catch (Exception e){
+                e.printStackTrace();
+            }
+        }
+        return roofList;
     }
 
     public static List<Measurement> getMeasurementWidth(){

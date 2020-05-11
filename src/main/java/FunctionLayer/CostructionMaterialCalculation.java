@@ -2,12 +2,12 @@ package FunctionLayer;
 
 public class CostructionMaterialCalculation {
 
-    ConstructionSizeCalculation constructionSizeCalculation = new ConstructionSizeCalculation();
+    //ConstructionSizeCalculation constructionSizeCalculation = new ConstructionSizeCalculation();
 
     //skal måske sættes i egen metode?
 
     //Spaer
-    int amount = constructionSizeCalculation.roofSpaerAmount(carportConstruction);
+   /* int amount = constructionSizeCalculation.roofSpaerAmount(carportConstruction);
     int size = constructionSizeCalculation.roofSpaerLength(carportConstruction);
     carportMaterial spær = null;
     for (int i = 0; i < amount; i++) {
@@ -24,4 +24,6 @@ public class CostructionMaterialCalculation {
         woodMaterials.add(spær);
 
     }
+    */
 }
+

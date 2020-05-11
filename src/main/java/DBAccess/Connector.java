@@ -24,9 +24,9 @@ public class Connector {
     public static Connection connection() throws ClassNotFoundException, SQLException {
         if ((singleton == null) || singleton.isClosed()) {
             //setDBCredentials();
-            URL = "jdbc:mysql://localhost:3306/fog?serverTimezone=UTC&allowPublicKeyRetrieval=" + "true&useSSL=false";
-            USERNAME = "root";
-            PASSWORD = "#Magicalrabbit326";
+            URL = "jdbc:mysql://64.227.122.67:3306/fog?serverTimezone=UTC&allowPublicKeyRetrieval=" + "true&useSSL=false";
+            USERNAME = "emilie";
+            PASSWORD = "bella12";
             Class.forName( "com.mysql.cj.jdbc.Driver" );
             singleton = DriverManager.getConnection( URL, USERNAME, PASSWORD );
         }
@@ -42,9 +42,9 @@ public class Connector {
             PASSWORD = System.getenv("JDBC_PASSWORD");
         } else {
             // Localhost
-            URL = "jdbc:mysql://localhost:3306/fog?serverTimezone=CET&useSSL=false";
-            USERNAME = "root";
-            PASSWORD = "#Magicalrabbit326";
+            URL = "jdbc:mysql://64.227.122.67:3306/fog?serverTimezone=CET&useSSL=false";
+            USERNAME = "emilie";
+            PASSWORD = "bella12";
         }
     }
 

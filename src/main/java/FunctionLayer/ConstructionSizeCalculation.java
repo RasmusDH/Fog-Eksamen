@@ -1,7 +1,7 @@
 package FunctionLayer;
 
 public class ConstructionSizeCalculation {
-
+/*
     public int roofSpaerLength (CarportConstruction carportConstruction) {
 
         int carportWidth = carportConstruction.getConstructionWidth()*10;
@@ -45,4 +45,6 @@ public class ConstructionSizeCalculation {
         int spaerAmount = (int) Math.round(nearSpaerAmount);
         return spaerAmount;
     }
+
+ */
 }

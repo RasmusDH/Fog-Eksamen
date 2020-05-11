@@ -39,6 +39,9 @@
         if (request.getServletContext().getAttribute("measurementList") == null){
             request.getServletContext().setAttribute("measurementList", Initializer.getMeasurementLength());
         }
+        if (request.getServletContext().getAttribute("roofList") == null){
+            request.getServletContext().setAttribute("roofList", Initializer.initRoofList());
+        }
     %>
 
     <title>Carport design</title>
@@ -95,10 +98,10 @@ Vælg nedenfor hvilke ting du ønsker til din carport:
         <div class="col-md-5 school-options-dropdown text-center">
             <div class="form-group">
                 <label>Vælg hældning på tag:</label>
-                <select class="form-control" name="slope">
+                <select class="form-control" name="del 7">
                     <option selected disabled>Hældning</option>
-                    <c:forEach var="slope" items="${slope}">
-                        <option name="slope">${slope.name}</option>
+                    <c:forEach var="slope" items="${applicationScope.roofList}">
+                        <option name="del 7">${slope.slope}</option>
                     </c:forEach>
                 </select>
             </div>
@@ -107,10 +110,10 @@ Vælg nedenfor hvilke ting du ønsker til din carport:
         <div class="col-md-5 school-options-dropdown text-center">
             <div class="form-group">
                 <label>Vælg materiale til tag</label>
-                <select class="form-control" name="del 6">
-                    <option selected disabled>Tag materiale</option>
-                    <c:forEach var="material" items="${materials}">
-                        <option name="del 6">${material.name}</option>
+                <select class="form-control" name="del 5">
+                    <option selected disabled>Carport tag materiale</option>
+                    <c:forEach var="material" items="${applicationScope.materialList}">
+                        <option name="del 5">${material.name}</option>
                     </c:forEach>
                 </select>
             </div>

@@ -117,10 +117,10 @@ Vælg nedenfor hvilke ting du ønsker til din carport:
     <div class="col-md-5 school-options-dropdown text-center">
         <div class="form-group">
             <label>Vælg hældning på tag:</label>
-            <select class="form-control" name="slope">
+            <select class="form-control" name="del 7">
                 <option selected disabled>Hældning</option>
-                <c:forEach var="slope" items="${slope}">
-                    <option name="slope">${slope.name}</option>
+                <c:forEach var="slope" items="${applicationScope.roofList}">
+                    <option name="del 7">${slope.slope}</option>
                 </c:forEach>
             </select>
         </div>
