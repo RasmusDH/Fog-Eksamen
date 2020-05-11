@@ -1,8 +1,10 @@
--- MySQL dump 10.13  Distrib 8.0.18, for Win64 (x86_64)
+CREATE DATABASE  IF NOT EXISTS `fog` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
+USE `fog`;
+-- MySQL dump 10.13  Distrib 8.0.18, for macos10.14 (x86_64)
 --
 -- Host: localhost    Database: fog
 -- ------------------------------------------------------
--- Server version	8.0.18
+-- Server version	8.0.20
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -23,10 +25,10 @@ DROP TABLE IF EXISTS `billofmaterials`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `billofmaterials` (
-  `materialId` int(255) NOT NULL,
+  `materialId` int NOT NULL,
   `type` varchar(255) DEFAULT NULL,
-  `length` int(11) DEFAULT NULL,
-  `amount` int(11) DEFAULT NULL,
+  `length` int DEFAULT NULL,
+  `amount` int DEFAULT NULL,
   `unit` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`materialId`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
@@ -40,6 +42,32 @@ LOCK TABLES `billofmaterials` WRITE;
 /*!40000 ALTER TABLE `billofmaterials` DISABLE KEYS */;
 INSERT INTO `billofmaterials` VALUES (1,'25x200 mm. trykimp. Brædt',360,4,'stk.'),(2,'25x200 mm. trykimp. Brædt',540,4,'stk.'),(3,'25x125 mm. trykimp. Brædt',360,2,'stk.'),(4,'25x125 mm. trykimp. Brædt',540,4,'stk'),(5,'38x73 mm. Lægte ubh.',420,1,'stk.'),(6,'45x95 mm. Regular ub.',270,12,'stk.'),(7,'45x95 mm. Regular ub.',240,4,'stk.'),(8,'45x195 mm. spærtræ ubh.',600,2,'stk.'),(9,'45x195 mm. spærtræ ubh.',480,1,'stk.'),(10,'45x195 mm. spærtræ ubh.',600,15,'stk.'),(11,'97x97 mm. trykimp. Stolpe',300,11,'stk.'),(12,'19x100 mm trykimp. Brædt',210,200,'stk.'),(13,'19x100 mm trykimp. Brædt',540,4,'stk.'),(14,'19x100 mm trykimp. Brædt',360,2,'stk.'),(15,'Plastmo Ecolite blåtonet',600,6,'stk.'),(16,'Plastmo Ecolite blåtonet',360,6,'stk.'),(17,'Plastmo bundskruer 200stk',0,3,'pakke'),(18,'Hulbånd 1x20 mm. 10 mtr',0,2,'rulle'),(19,'Universal 190mm højre',0,15,'stk.'),(20,'Universal 190mm venstre',0,15,'stk.'),(21,'4,5 x 60 mm skruer 200 stk',0,1,'pakke'),(22,'4,0 x 50mm beslagskruser 250 stk.',0,3,'pakke'),(23,'bræddebolt 10 x 120mm.',0,18,'stk.'),(24,'Firkantskiver 40x40x11 mm ',0,12,'stk.'),(25,'4,5 x 70 mm. skruer 400 stk',0,2,'pk.'),(26,'4,5 x 50 mm. skruer 300 stk',0,2,'pakke'),(27,'Stalddørsgreb 50x75',0,1,'sæt'),(28,'T-hængsel 390 mm',0,2,'stk.'),(29,'Vinkelbeslag 35',0,32,'stk.');
 /*!40000 ALTER TABLE `billofmaterials` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `constructionmaterials`
+--
+
+DROP TABLE IF EXISTS `constructionmaterials`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `constructionmaterials` (
+  `materialId` int NOT NULL,
+  `type` varchar(255) DEFAULT NULL,
+  `length` int DEFAULT NULL,
+  `unit` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`materialId`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `constructionmaterials`
+--
+
+LOCK TABLES `constructionmaterials` WRITE;
+/*!40000 ALTER TABLE `constructionmaterials` DISABLE KEYS */;
+INSERT INTO `constructionmaterials` VALUES (1,'25x200 mm. trykimp. Brædt',360,'stk.'),(2,'25x200 mm. trykimp. Brædt',540,'stk.'),(3,'25x125 mm. trykimp. Brædt',360,'stk.'),(4,'25x125 mm. trykimp. Brædt',540,'stk'),(5,'38x73 mm. Lægte ubh.',420,'stk.'),(6,'45x95 mm. Regular ub.',270,'stk.'),(7,'45x95 mm. Regular ub.',240,'stk.'),(8,'45x195 mm. spærtræ ubh.',600,'stk.'),(9,'45x195 mm. spærtræ ubh.',480,'stk.'),(10,'45x195 mm. spærtræ ubh.',600,'stk.'),(11,'97x97 mm. trykimp. Stolpe',300,'stk.'),(12,'19x100 mm trykimp. Brædt',210,'stk.'),(13,'19x100 mm trykimp. Brædt',540,'stk.'),(14,'19x100 mm trykimp. Brædt',360,'stk.'),(15,'Plastmo Ecolite blåtonet',600,'stk.'),(16,'Plastmo Ecolite blåtonet',360,'stk.'),(17,'Plastmo bundskruer 200stk',0,'pakke'),(18,'Hulbånd 1x20 mm. 10 mtr',0,'rulle'),(19,'Universal 190mm højre',0,'stk.'),(20,'Universal 190mm venstre',0,'stk.'),(21,'4,5 x 60 mm skruer 200 stk',0,'pakke'),(22,'4,0 x 50mm beslagskruser 250 stk.',0,'pakke'),(23,'bræddebolt 10 x 120mm.',0,'stk.'),(24,'Firkantskiver 40x40x11 mm ',0,'stk.'),(25,'4,5 x 70 mm. skruer 400 stk',0,'pk.'),(26,'4,5 x 50 mm. skruer 300 stk',0,'pakke'),(27,'Stalddørsgreb 50x75',0,'sæt'),(28,'T-hængsel 390 mm',0,'stk.'),(29,'Vinkelbeslag 35',0,'stk.');
+/*!40000 ALTER TABLE `constructionmaterials` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -73,7 +101,7 @@ DROP TABLE IF EXISTS `measurements`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `measurements` (
   `Navn` varchar(20) DEFAULT NULL,
-  `measure` int(5) DEFAULT NULL,
+  `measure` int DEFAULT NULL,
   `unit` varchar(5) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -120,7 +148,7 @@ DROP TABLE IF EXISTS `roof`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `roof` (
   `Kind` varchar(20) DEFAULT NULL,
-  `slope` int(5) DEFAULT NULL
+  `slope` int DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -130,7 +158,7 @@ CREATE TABLE `roof` (
 
 LOCK TABLES `roof` WRITE;
 /*!40000 ALTER TABLE `roof` DISABLE KEYS */;
-INSERT INTO `roof` VALUES ('flat',NULL),('sloped',45),('sloped',40),('sloped',35),('sloped',30),('sloped',25),('sloped',20),('flat',NULL),('sloped',45),('sloped',40),('sloped',35),('sloped',30),('sloped',25),('sloped',20);
+INSERT INTO `roof` VALUES ('sloped',45),('sloped',40),('sloped',35),('sloped',30),('sloped',25),('sloped',20);
 /*!40000 ALTER TABLE `roof` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -143,4 +171,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-05-06 13:25:12
+-- Dump completed on 2020-05-11 14:07:46
