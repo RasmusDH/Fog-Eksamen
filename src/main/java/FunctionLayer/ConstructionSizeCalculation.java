@@ -1,7 +1,7 @@
 package FunctionLayer;
 
 public class ConstructionSizeCalculation {
-/*
+
     public int roofSpaerLength (CarportConstruction carportConstruction) {
 
         int carportWidth = carportConstruction.getConstructionWidth()*10;
@@ -46,5 +46,32 @@ public class ConstructionSizeCalculation {
         return spaerAmount;
     }
 
- */
+
+    public int pillarAmount (CarportConstruction carportConstruction) {
+
+        int carportLength = carportConstruction.getConstructionLength()*10;
+        double nearPillarAmount = carportLength/2000.0 +1;
+        int pillarAmount = (int) Math.round(nearPillarAmount)*2;
+        return pillarAmount;
+    }
+
+    public int stropLength (CarportConstruction carportConstruction) {
+
+        int carportLength = carportConstruction.getConstructionLength()*10;
+        double nearPillarAmount = carportLength/2000.0 +1;
+        int pillarAmount = (int) Math.round(nearPillarAmount);
+        int stropLength = carportLength/pillarAmount;
+        return stropLength;
+
+    }
+
+    public int stropAmount (CarportConstruction carportConstruction) {
+
+        int carportLength = carportConstruction.getConstructionLength()*10;
+        double nearPillarAmount = carportLength/2000.0 +1;
+        int pillarAmount = (int) Math.round(nearPillarAmount);
+        int stropAmount = (pillarAmount - 1) * 2;
+        return stropAmount;
+    }
+
 }
