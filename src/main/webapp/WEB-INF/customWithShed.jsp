@@ -155,13 +155,9 @@ Med skur uden taghældning
         </div>
 
         <div class="col-md-6 text-center">
-            <button type="submit" class="btn btn-dark mt-4">Tilføj til kurv</button>
+            <button class="btn btn-dark mt-4" role="button" aria-pressed="true">Bestil</button>
         </div>
 
-        <div class="col-md-6 text-center">
-            <a href="FrontController?target=redirect&destination=basket"
-               class="btn btn-dark mt-4" role="button" aria-pressed="true">Gå til kurv</a>
-        </div>
     </div>
 </form>
 </div>
