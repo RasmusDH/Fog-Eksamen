@@ -6,7 +6,7 @@ public class CostructionMaterialCalculation {
 
     //skal måske sættes i egen metode?
 
-    /*//Spaer
+    //Spaer
     int amount = constructionSizeCalculation.roofSpaerAmount(carportConstruction);
     int size = constructionSizeCalculation.roofSpaerLength(carportConstruction);
     carportMaterial spær = null;
@@ -24,7 +24,7 @@ public class CostructionMaterialCalculation {
         woodMaterials.add(spær);
 
     }
-
+/*
    //stolper
     int amount = constructionSizeCalculation.pillarAmount(carportConstruction);
     carportMaterial stolper = null;
