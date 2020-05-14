@@ -18,37 +18,34 @@ public class CustomOrderWithShed extends Command {
         HttpSession session = request.getSession();
 
 
-        ArrayList<Material> materials = MaterialMapper.getMaterial();
-        ArrayList<Measurement> measureWidth = MeasurementMapper.getMeasurementsWidth(width);
-        ArrayList<Measurement> measureLength = MeasurementMapper.getMeasurementsLength(lengthMeasure);
-        ArrayList<Measurement> measureShedWidth = MeasurementMapper.getMeasurementsShedWidth(shedWidth);
-        ArrayList<Measurement> measureShedLength = MeasurementMapper.getMeasurementsShedLength(shedLength);
-        System.out.println(measureShedWidth);
-        System.out.println(measureWidth);
-        System.out.println(materials);
-        System.out.println(measureLength);
-        System.out.println(measureShedLength);
+        ArrayList<String> measureWidth = new ArrayList<>();
+        measureWidth.add("270");
+        measureWidth.add("300");
+        measureWidth.add("330");
 
-
+        ArrayList<String> measureLength = new ArrayList<>();
+        measureLength.add("300");
+        measureLength.add("330");
+        measureLength.add("360");
 
         request.setAttribute("measureLengths", measureLength);
         request.setAttribute("measureWidths", measureWidth);
-        request.setAttribute("measureShedLengths", measureShedLength);
-        request.setAttribute("measureShedWidths", measureShedWidth);
-        request.setAttribute("del 6", materials);
-        request.setAttribute("materials", materials);
+        //request.setAttribute("measureShedLengths", measureShedLength);
+        //request.setAttribute("measureShedWidths", measureShedWidth);
+        //request.setAttribute("del 6", materials);
+        //request.setAttribute("materials", materials);
 
         // Vi får "kurv" fra login
         //Orderlist orderlist = (Orderlist) session.getAttribute("kurv");
 
         int carportLength = Integer.parseInt(request.getParameter("del 1"));
         int carportWidth = Integer.parseInt(request.getParameter("del 2"));
-        int shedLength = Integer.parseInt(request.getParameter("del 3"));
-        int shedWidth = Integer.parseInt(request.getParameter("del 4"));
-        String carportMaterial = request.getParameter("del 5");
-        String roofMaterial = request.getParameter("del 6");
+        //int shedLength = Integer.parseInt(request.getParameter("del 3"));
+        //int shedWidth = Integer.parseInt(request.getParameter("del 4"));
+        //String carportMaterial = request.getParameter("del 5");
+        //String roofMaterial = request.getParameter("del 6");
 
-        if (carportWidth <= shedWidth) {
+        /*if (carportWidth <= shedWidth) {
             request.setAttribute("status", "error");
             request.setAttribute("message",
                     String.format("Skur bredden er for stor!",
@@ -70,8 +67,14 @@ public class CustomOrderWithShed extends Command {
         } else {
             //int quantity = Integer.parseInt(antal);
 
-
-            session.setAttribute("carportMaterialName", materials);
+*/
+        if (carportLength == 0) {
+            request.setAttribute("status", "error");
+            request.setAttribute("message",
+                    String.format("Du mangler at vælge et mål!",
+                            carportLength));
+        }
+            //session.setAttribute("carportMaterialName", materials);
 
 
             //orderItem = new customerCustomOrder(getMaterial(materials));
@@ -86,8 +89,8 @@ public class CustomOrderWithShed extends Command {
                 //            bottom, topping, quantity));
 
            // request.setAttribute("orderItem", orderItem);
-        }
-        return "customWithShed";
+
+        return "customOrderWithShed";
     }
 
 
