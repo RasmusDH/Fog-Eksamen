@@ -44,17 +44,8 @@
         if (request.getServletContext().getAttribute("measurementList") == null){
             request.getServletContext().setAttribute("measurementList", Initializer.getMeasurementLength());
         }
-        String besked = (String) request.getAttribute("message");
-        String status = (String) request.getAttribute("status");
-        if (besked != null && status != null) {
-            String alert = "";
-            if (status.equals("ok")) {
-                alert = "<div class=\"alert alert-success\">_message_</div>";
-            } else {
-                alert = "<div class=\"alert alert-danger\">_message_</div>";
-            }
-            alert = alert.replace("_message_", besked);
-            out.println(alert);
+        if (request.getServletContext().getAttribute("Material") == null){
+            request.getServletContext().setAttribute("Material", Initializer.getMeasurementLength());
         }
     %>
 

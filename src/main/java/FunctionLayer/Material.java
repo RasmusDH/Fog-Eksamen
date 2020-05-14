@@ -1,8 +1,11 @@
 package FunctionLayer;
 
+import java.util.ArrayList;
+
 public class Material {
 
     private String name;
+    private ArrayList<Integer> measurements = new ArrayList<Integer>();
 
     public Material(String name) {
 
@@ -23,6 +26,8 @@ public class Material {
 
         return name + "\n";
     }
+
+
 
 
 }

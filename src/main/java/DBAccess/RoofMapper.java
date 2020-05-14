@@ -23,7 +23,8 @@ public class RoofMapper {
 
                 String kind = rs.getString( "Kind" );
                 int slope = rs.getInt( "slope" );
-                roofList.add(new Roof(kind, slope));
+                int roofId = rs.getInt ("roofId");
+                roofList.add(new Roof(roofId, kind, slope));
             }
         } catch ( ClassNotFoundException | SQLException ex ) {
             System.out.println(ex.getMessage());

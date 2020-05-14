@@ -4,8 +4,10 @@ public class Roof {
 
     private String kind;
     private int slope;
+    private int roofId;
 
-    public Roof(String kind, int slope) {
+    public Roof(int roofId, String kind, int slope) {
+        this.roofId = roofId;
         this.kind = kind;
         this.slope = slope;
     }
@@ -26,9 +28,18 @@ public class Roof {
         this.slope = slope;
     }
 
+    public int getRoofId() {
+        return roofId;
+    }
+
+    public void setRoofId(int roofId) {
+        this.roofId = roofId;
+    }
+
     @Override
     public String toString() {
-        return "Roof type: " + kind +
+        return "Roof Id: " + roofId
+                +"\nRoof type: " + kind +
                 "\nSlope: " + slope;
     }
 }

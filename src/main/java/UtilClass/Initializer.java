@@ -2,12 +2,8 @@ package UtilClass;
 
 
 
-import DBAccess.MaterialMapper;
-import DBAccess.MeasurementMapper;
 import DBAccess.RoofMapper;
-import DBAccess.UserMapper;
 import FunctionLayer.*;
-import sun.rmi.runtime.Log;
 
 import java.util.List;
 

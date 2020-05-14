@@ -1,21 +1,11 @@
 package PresentationLayer;
 
-import DBAccess.MeasurementMapper;
-import DBAccess.MaterialMapper;
-import DBAccess.RoofMapper;
 import FunctionLayer.*;
-import UtilClass.Initializer;
-import com.sun.org.apache.xpath.internal.operations.Or;
 
-import javax.servlet.RequestDispatcher;
-import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import java.io.IOException;
 import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
 
 public class CustomOrderWithShed extends Command {
     private String width = "width";

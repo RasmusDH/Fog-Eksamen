@@ -1,11 +1,6 @@
 package FunctionLayer;
 
-import DBAccess.MaterialMapper;
-import DBAccess.MeasurementMapper;
 import DBAccess.UserMapper;
-import PresentationLayer.Login;
-
-import java.util.ArrayList;
 
 /**
  * The purpose of LogicFacade is to...
