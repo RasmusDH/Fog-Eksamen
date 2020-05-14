@@ -24,21 +24,21 @@
     <%@include file="/header/header.inc"%>
 
     <%
-        if (request.getServletContext().getAttribute("materialList") == null){
-            request.getServletContext().setAttribute("materialList", Initializer.initMaterialList());
-        }
-        if (request.getServletContext().getAttribute("measurementList") == null){
-            request.getServletContext().setAttribute("measurementList", Initializer.getMeasurementShedWidth());
-        }
-        if (request.getServletContext().getAttribute("measurementList") == null){
-            request.getServletContext().setAttribute("measurementList", Initializer.getMeasurementShedLength());
-        }
-        if (request.getServletContext().getAttribute("measurementList") == null){
-            request.getServletContext().setAttribute("measurementList", Initializer.getMeasurementWidth());
-        }
-        if (request.getServletContext().getAttribute("measurementList") == null){
-            request.getServletContext().setAttribute("measurementList", Initializer.getMeasurementLength());
-        }
+        /*  if (request.getServletContext().getAttribute("materialList") == null){
+              request.getServletContext().setAttribute("materialList", Initializer.initMaterialList());
+          }
+          if (request.getServletContext().getAttribute("measurementList") == null){
+              request.getServletContext().setAttribute("measurementList", Initializer.getMeasurementShedWidth());
+          }
+          if (request.getServletContext().getAttribute("measurementList") == null){
+              request.getServletContext().setAttribute("measurementList", Initializer.getMeasurementShedLength());
+          }
+          if (request.getServletContext().getAttribute("measurementList") == null){
+              request.getServletContext().setAttribute("measurementList", Initializer.getMeasurementWidth());
+          }
+          if (request.getServletContext().getAttribute("measurementList") == null){
+              request.getServletContext().setAttribute("measurementList", Initializer.getMeasurementLength());
+          }*/
     %>
 
     <%  String besked = (String) request.getAttribute("message");
@@ -124,19 +124,20 @@ Vælg nedenfor hvilke ting du ønsker til din carport:
     <form action="FrontController" method="post">
         <input type="hidden" name="target" value="receipt">
 
-    <div class="row">
-        <div class="col-md-6 text-center">
-            <a href="FrontController?target=redirect&destination=plantegning"
-               class="btn btn-dark mt-4" role="button" aria-pressed="true">Se plantegning af carport</a>
-        </div>
+        <div class="row">
+            <div class="col-md-6 text-center">
+                <a href="FrontController?target=redirect&destination=plantegning"
+                   class="btn btn-dark mt-4" role="button" aria-pressed="true">Se plantegning af carport</a>
+            </div>
 
-        <div class="col-md-4 text-center mt-3 mb-3">
-            <button type="submit" class="btn btn-dark mt-4 mb-3">Bestil</button>
-        </div>
+            <div class="col-md-4 text-center mt-3 mb-3">
+                <a href="FrontController?target=redirect&destination=customerInfo"
+                   button type="submit" class="btn btn-dark mt-4 mb-3">Bestil</a>
+            </div>
 
-        </form>
+    </form>
 
-        </div>
+    </div>
     </div>
 </form>
 </div>

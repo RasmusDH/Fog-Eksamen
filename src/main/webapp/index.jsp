@@ -11,18 +11,18 @@
     <%!
         @Override
         public void jspInit(){
-            Initializer.initMaterialList();
-            Initializer.initMeasurements();
+            //Initializer.initMaterialList();
+            // Initializer.initMeasurements();
         }
 
     %>
 
     <%
-        request.setAttribute("materials", Initializer.initMaterialList());
-        request.setAttribute("measureWidths", Initializer.getMeasurementWidth());
-        request.setAttribute("measureLengths", Initializer.getMeasurementLength());
-        request.setAttribute("measureShedLengths", Initializer.getMeasurementShedLength());
-        request.setAttribute("measureShedWidths", Initializer.getMeasurementShedWidth());
+        // request.setAttribute("materials", Initializer.initMaterialList());
+        // request.setAttribute("measureWidths", Initializer.getMeasurementWidth());
+        // request.setAttribute("measureLengths", Initializer.getMeasurementLength());
+        //request.setAttribute("measureShedLengths", Initializer.getMeasurementShedLength());
+        // request.setAttribute("measureShedWidths", Initializer.getMeasurementShedWidth());
     %>
     <!-- Header -->
     <%@include file="header/header.inc"%>
@@ -39,7 +39,7 @@
 </head>
 <body>
 <button>
-<a href="FrontController?target=redirect&destination=customCarport">Design your carport here</a>
+    <a href="FrontController?target=redirect&destination=customCarport">Design your carport here</a>
 </button>
 </body>
 </html>

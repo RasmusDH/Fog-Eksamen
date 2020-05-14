@@ -21,7 +21,7 @@ public class Initializer {
     private static List<Measurement> measurementShedWidth;
     private static List<Roof> roofList;
 
-
+/*
     public static List<Material> initMaterialList() {
         if (materialList == null){
             try {
@@ -70,5 +70,5 @@ public class Initializer {
     public static List<Measurement> getMeasurementShedLength(){
         return measurementShedLength;
     }
-
+*/
 }
