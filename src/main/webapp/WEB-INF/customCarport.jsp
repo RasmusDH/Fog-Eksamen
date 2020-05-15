@@ -58,15 +58,16 @@
     <title>Carport design</title>
 </head>
 <body>
-<h1>Lav din egen carport</h1>
 
-Her kan du designe din egen carport med dine egne mål og tilføjelser.
+Her kan du designe din egen carport med dine egne mål og tilføjelser.<br>
 Vælg nedenfor hvilke ting du ønsker til din carport:
 
 <!-- Dropdowns -->
 
 <form action="FrontController" method="post">
     <input type="hidden" name="target" value="custom">
+
+    <div class="btn-group-vertical">
 
     <div class="row mt-4">
         <div class="col-md-5 school-options-dropdown text-center">
@@ -118,14 +119,10 @@ Vælg nedenfor hvilke ting du ønsker til din carport:
         </div>
     </div>
 
-    <input type="hidden" name="target" value="receipt">
-
-
-
     <b2> Indtast personlige oplysninger, så vi kan sende dig et tilbud</b2>
 
-    <div class="col-md-5 school-options-dropdown text-center">
-        <form action="/action_page.php">
+        <div class="col-md-5 school-options-dropdown text-center">
+            <div class="form-group">
             <label for="name">Navn:</label><br>
             <input type="text" id="name" name="name" value="navn"><br>
             <label for="email">Email:</label><br>
@@ -133,11 +130,9 @@ Vælg nedenfor hvilke ting du ønsker til din carport:
         </form>
     </div>
 
-    <div class="col-md-4 text-center mt-3 mb-3">
+    <div class="col-md-5 school-options-dropdown text-center">
         <a href="FrontController?target=redirect&destination=receipt"
            button type="submit" class="btn btn-dark mt-4 mb-3">Bestil</a>
-    </div>
-
     </div>
     </div>
 </form>

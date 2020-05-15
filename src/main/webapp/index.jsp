@@ -44,10 +44,11 @@
 <body>
 
 <br>
+<div style="text-align: center">
         <a href="FrontController?target=redirect&destination=options" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">
             Tryk her for at designe din carport
         </a>
-
+</div>
 </body>
 </html>
 

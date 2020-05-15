@@ -23,27 +23,41 @@
 </head>
 <body>
 
-Hvordan skal din carport være?
+
 
 <br> <br>
+
+
+
+<div style="text-align: center">
+
+    <h3> Hvordan skal din carport være? </h3>
 
 <div class="btn-group-vertical">
 
     <button>
-        <a class="btn btn-primary" href="FrontController?target=redirect&destination=customCarport">Uden skur med vinkeltag</a>
+        <a class="btn btn-dark" href="FrontController?target=redirect&destination=customCarport">Uden skur med vinkeltag</a>
     </button>
 
-    <button>
-    <a class="btn btn-primary" href="FrontController?target=redirect&destination=customWithShed">Med skur med fladt tag</a>
-    </button>
+    <br>
 
     <button>
-    <a class="btn btn-primary" href="FrontController?target=redirect&destination=customWithout">Uden skur med fladt tag</a>
+    <a class="btn btn-dark" href="FrontController?target=redirect&destination=customWithShed">Med skur med fladt tag</a>
     </button>
 
+    <br>
+
     <button>
-    <a class="btn btn-primary" href="FrontController?target=redirect&destination=customWithShedSlope">Med skur med vinkeltag</a>
+    <a class="btn btn-dark" href="FrontController?target=redirect&destination=customWithout">Uden skur med fladt tag</a>
     </button>
+
+    <br>
+
+    <button>
+    <a class="btn btn-dark" href="FrontController?target=redirect&destination=customWithShedSlope">Med skur med vinkeltag</a>
+    </button>
+
+</div>
 
 </div>
 
