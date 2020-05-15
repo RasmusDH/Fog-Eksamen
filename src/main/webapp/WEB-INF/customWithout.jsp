@@ -1,13 +1,12 @@
-<%@ page import="UtilClass.Initializer" %><%--
+<%--
   Created by IntelliJ IDEA.
   User: emilie
-  Date: 20/04/2020
-  Time: 10.59
+  Date: 14/05/2020
+  Time: 18.16
   To change this template use File | Settings | File Templates.
 --%>
 
-<!-- Design-side med skur uden tag -->
-
+<!-- Design-side uden skur uden taghældning -->
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
@@ -120,6 +119,18 @@ Med skur uden taghældning
                     </c:forEach>
             </div>
         </div>
+
+        <div class="col-md-5 school-options-dropdown text-center">
+            <div class="form-group">
+                <label>Vælg tag hældning</label>
+                <select class="form-control" name="del 5">
+                    <option selected disabled>Tag hældning</option>
+                    <c:forEach var="material" items="${applicationScope.materialList}">
+                    <option name="del 5">${material.name}</option>
+                    </c:forEach>
+            </div>
+        </div>
+
     </div>
 
     <b2> Indtast personlige oplysninger, så vi kan sende dig et tilbud</b2>
@@ -137,7 +148,6 @@ Med skur uden taghældning
         <a href="FrontController?target=redirect&destination=receipt"
            button type="submit" class="btn btn-dark mt-4 mb-3">Bestil</a>
     </div>
-
     </div>
 </form>
 </div>
@@ -147,4 +157,3 @@ Med skur uden taghældning
 </body>
 <!-- Footer -->
 <%@include file="/header/footer.inc"%>
-</html>

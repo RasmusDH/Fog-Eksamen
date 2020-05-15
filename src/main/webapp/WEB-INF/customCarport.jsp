@@ -6,7 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 
-<!-- Design-side UDEN skur -->
+<!-- Design-side uden skur med taghældning -->
 
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -69,7 +69,6 @@ Vælg nedenfor hvilke ting du ønsker til din carport:
     <input type="hidden" name="target" value="custom">
 
     <div class="row mt-4">
-
         <div class="col-md-5 school-options-dropdown text-center">
             <div class="form-group">
                 <label>Vælg Carport længde:</label>
@@ -106,8 +105,6 @@ Vælg nedenfor hvilke ting du ønsker til din carport:
             </div>
         </div>
 
-
-
         <div class="col-md-5 school-options-dropdown text-center">
             <div class="form-group">
                 <label>Vælg materiale til tag</label>
@@ -121,27 +118,30 @@ Vælg nedenfor hvilke ting du ønsker til din carport:
         </div>
     </div>
 
-    <form action="FrontController" method="post">
-        <input type="hidden" name="target" value="receipt">
+    <input type="hidden" name="target" value="receipt">
 
-        <div class="row">
-            <div class="col-md-6 text-center">
-                <a href="FrontController?target=redirect&destination=plantegning"
-                   class="btn btn-dark mt-4" role="button" aria-pressed="true">Se plantegning af carport</a>
-            </div>
 
-            <div class="col-md-4 text-center mt-3 mb-3">
-                <a href="FrontController?target=redirect&destination=customerInfo"
-                   button type="submit" class="btn btn-dark mt-4 mb-3">Bestil</a>
-            </div>
 
-    </form>
+    <b2> Indtast personlige oplysninger, så vi kan sende dig et tilbud</b2>
+
+    <div class="col-md-5 school-options-dropdown text-center">
+        <form action="/action_page.php">
+            <label for="name">Navn:</label><br>
+            <input type="text" id="name" name="name" value="navn"><br>
+            <label for="email">Email:</label><br>
+            <input type="text" id="email" name="email" value="email"><br><br>
+        </form>
+    </div>
+
+    <div class="col-md-4 text-center mt-3 mb-3">
+        <a href="FrontController?target=redirect&destination=receipt"
+           button type="submit" class="btn btn-dark mt-4 mb-3">Bestil</a>
+    </div>
 
     </div>
     </div>
 </form>
 </div>
-
 
 </body>
 <!-- Footer -->
