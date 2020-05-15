@@ -12,7 +12,7 @@ public class CustomOrderWithShed extends Command {
     private String lengthMeasure = "length";
     private String shedWidth = "shed width";
     private String shedLength = "shed length";
-    //static OrderItem orderItem = null;
+    static CarportConstruction carportConstruction = null;
     @Override
     String execute(HttpServletRequest request, HttpServletResponse response) {
         HttpSession session = request.getSession();
@@ -75,8 +75,10 @@ public class CustomOrderWithShed extends Command {
                             carportLength));
         }
             //session.setAttribute("carportMaterialName", materials);
+            session.setAttribute("carportLength", carportLength);
+            session.setAttribute("carportWidth", carportWidth);
 
-
+            carportConstruction = new CarportConstruction(carportLength, carportWidth);
             //orderItem = new customerCustomOrder(getMaterial(materials));
             // tilføjer ordren til kurve listen:
             //orderlist.addOrderItem(orderItem);

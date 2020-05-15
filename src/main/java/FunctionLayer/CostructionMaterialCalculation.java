@@ -1,29 +1,34 @@
 package FunctionLayer;
 
+import java.util.ArrayList;
+
 public class CostructionMaterialCalculation {
 
     ConstructionSizeCalculation constructionSizeCalculation = new ConstructionSizeCalculation();
 
     //skal måske sættes i egen metode?
+    public ArrayList woodMaterialCalculator() {
+        ArrayList<carportMaterial> woodMaterials = new ArrayList<>();
 
-    //Spaer
-    int amount = constructionSizeCalculation.roofSpaerAmount(carportConstruction);
-    int size = constructionSizeCalculation.roofSpaerLength(carportConstruction);
-    carportMaterial spær = null;
-    for (int i = 0; i < amount; i++) {
-        spær = LogicFacade.getMaterialBySize(size);
-        spær.setName("SPÆRTRE");
-        spær.setUnit(LogicFacade.getUnitByName(spær.getName()));
+        //Spaer
+        int amount = constructionSizeCalculation.roofSpaerAmount(carportConstruction);
+        int size = constructionSizeCalculation.roofSpaerLength(carportConstruction);
+        carportMaterial spær = null;
+        for (int i = 0; i < amount; i++) {
+            spær = LogicFacade.getMaterialBySize(size);
+            spær.setName("SPÆRTRE");
+            spær.setUnit(LogicFacade.getUnitByName(spær.getName()));
             spær.setWidth(LogicFacade.getWidthById(spær.getId(), spær.getName()));
             spær.setThickness(LogicFacade.getThicknessByID(spær.getId()));
             spær.setName("SPÆRTRÆ" + spær.getThickness() + "x" + spær.getWidth());
-        spær.setSize(size);
-        spær.setAmount(amount);
+            spær.setSize(size);
+            spær.setAmount(amount);
 
-        spær.setComment("Spær skal monteres på remme");
-        woodMaterials.add(spær);
+            spær.setComment("Spær skal monteres på remme");
+            woodMaterials.add(spær);
 
-    }
+        }
+
 /*
    //stolper
     int amount = constructionSizeCalculation.pillarAmount(carportConstruction);
@@ -59,5 +64,6 @@ public class CostructionMaterialCalculation {
         woodMaterials.add(rem);
     }
 */
+    return woodMaterials;
+    }
 }
-
