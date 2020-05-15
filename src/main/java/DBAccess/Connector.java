@@ -25,8 +25,8 @@ public class Connector {
         if ((singleton == null) || singleton.isClosed()) {
             //setDBCredentials();
             URL = "jdbc:mysql://64.227.122.67:3306/fog?serverTimezone=UTC&allowPublicKeyRetrieval=" + "true&useSSL=false";
-            USERNAME = "emilie";
-            PASSWORD = "bella12";
+            USERNAME = "root";
+            PASSWORD = "Byt26fsh";
             Class.forName( "com.mysql.cj.jdbc.Driver" );
             singleton = DriverManager.getConnection( URL, USERNAME, PASSWORD );
         }
@@ -43,8 +43,8 @@ public class Connector {
         } else {
             // Localhost
             URL = "jdbc:mysql://64.227.122.67:3306/fog?serverTimezone=CET&useSSL=false";
-            USERNAME = "emilie";
-            PASSWORD = "bella12";
+            USERNAME = "root";
+            PASSWORD = "Byt26fsh";
         }
     }
 
