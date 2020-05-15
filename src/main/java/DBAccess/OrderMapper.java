@@ -35,4 +35,57 @@ public class OrderMapper {
         }
         return orderList;
     }
+
+
+   /* public class OrderMapper {
+        private String width = "width";
+        private String lengthMeasure = "length";
+
+        public static ArrayList<Order> getOrderWidth(String width) {
+
+
+            ArrayList<Order> OrdersWidth = new ArrayList<>();
+
+            try {
+                Connector.connection();
+                String SQL = "SELECT orders FROM width " + "WHERE Navn=?";
+                PreparedStatement ps = Connector.connection().prepareStatement( SQL );
+                ps.setString(1, width);
+                ResultSet rs = ps.executeQuery();
+                while ( rs.next() ) {
+                    int width1 = rs.getInt( "width" );
+                    OrdersWidth.add(new Order(Order));
+                }
+
+            } catch ( ClassNotFoundException | SQLException ex ) {
+                System.out.println(ex.getMessage());
+            }
+
+            return OrdersWidth;
+        }
+
+        public static ArrayList<Order> getOrdersLength(String Length) {
+
+
+            ArrayList<Order> OrdersLength = new ArrayList<>();
+
+            try {
+                Connector.connection();
+                String SQL = "SELECT orders FROM length" + "WHERE Navn=?";
+                PreparedStatement ps = Connector.connection().prepareStatement( SQL );
+                ps.setString(1, Legnth);
+                ResultSet rs = ps.executeQuery();
+                while ( rs.next() ) {
+
+                    int length = rs.getInt( "length" );
+                    OrdersLength.add(new Order(measurement));
+                }
+
+            } catch ( ClassNotFoundException | SQLException ex ) {
+                System.out.println(ex.getMessage());
+            }
+            return OrdersLength;
+        }
+
+*/
 }

@@ -9,30 +9,33 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
           integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-    <link rel = "stylesheet"
-          type = "text/css"
-          href = "css/navigationsbar.css" />
-
     <title>Johannes Fog</title>
 </head>
 <body>
 
-<div class="row">
 
-<!-- Start Picture -->
-    <div class="col">
-        <img src="./Images/johannesfog.png" alt="logo">
-    </div>
-<!-- Overskrift -->
-    <div class="col">
-        <h1 text-center> Johannes Fog - Trælast & Byggecenter</h1>
-    </div>
-
-</div>
+<!-- Image and text -->
+<nav class="navbar navbar-light bg-light">
+    <a class="navbar-brand" href="#">
+        <img src="./Images/johannesfog.png" width="30" height="30" class="d-inline-block align-top" alt="">
+        Johannes Fog - Carport Design Side
+    </a>
+</nav>
 
 <!-- Navigationsbar -->
-<div class="topnav">
-    <a class="active" href="FrontController?target=redirect&destination=index">Home</a>
-    <a href= "FrontController?target=redirect&destination=about"">About FOG</a>
-    <a href="FrontController?target=redirect&destination=options">Carports</a>
-</div>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="FrontController?target=redirect&destination=index">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="FrontController?target=redirect&destination=options">Carport</a>
+            </li>
+            </li>
+        </ul>
+    </div>
+</nav>

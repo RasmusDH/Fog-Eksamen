@@ -27,6 +27,10 @@
     <!-- Header -->
     <%@include file="header/header.inc"%>
 
+    <link rel = "stylesheet"
+          type = "text/css"
+          href = "css/center.css" />
+
     <!-- Required meta tags -->
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -38,10 +42,16 @@
     <title>Fog</title>
 </head>
 <body>
-<button>
-    <a href="FrontController?target=redirect&destination=customCarport">Design your carport here</a>
-</button>
+
+<br>
+<div style="text-align: center">
+        <a href="FrontController?target=redirect&destination=options" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">
+            Tryk her for at designe din carport
+        </a>
+</div>
 </body>
 </html>
+
 <!-- Footer -->
-<%@include file="header/footer.inc"%>
+<%@include file="/header/footer.inc"%>
+

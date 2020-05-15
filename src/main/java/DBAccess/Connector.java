@@ -43,8 +43,8 @@ public class Connector {
         } else {
             // Localhost
             URL = "jdbc:mysql://64.227.122.67:3306/fog?serverTimezone=CET&useSSL=false";
-            USERNAME = "emilie";
-            PASSWORD = "bella12";
+            USERNAME = "root";
+            PASSWORD = "Byt26fsh";
         }
     }
 

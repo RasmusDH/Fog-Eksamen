@@ -25,23 +25,6 @@
 <body>
 Her kommer plantegningen af din carport
 
-<div class="row">
-    <div class="col-md-6 text-center">
-        <a href="FrontController?target=redirect&destination=basket"
-           class="btn btn-dark mt-4" role="button" aria-pressed="true">Tilføj til kurv</a>
-    </div>
-    <div class="col-md-6 text-center">
-        <a onclick="goBack()" class="btn btn-dark mt-4" style="color:white"
-           class="btn btn-dark mt-4" role="button" aria-pressed="true" >Vælg andre mål til carporten</a>
-        <script>
-            function goBack() {
-                window.history.back();
-            }
-        </script>
-    </div>
-
-
-</div>
 </body>
 
 <!-- Footer -->

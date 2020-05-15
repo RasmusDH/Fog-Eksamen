@@ -1,13 +1,12 @@
-<%@ page import="UtilClass.Initializer" %><%--
+<%--
   Created by IntelliJ IDEA.
   User: emilie
-  Date: 20/04/2020
-  Time: 10.59
+  Date: 14/05/2020
+  Time: 18.16
   To change this template use File | Settings | File Templates.
 --%>
 
-<!-- Design-side uden skur med taghældning -->
-
+<!-- Design-side med skur med tag -->
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
@@ -23,53 +22,31 @@
     <!-- Header -->
     <%@include file="/header/header.inc"%>
 
-    <%
-        /*  if (request.getServletContext().getAttribute("materialList") == null){
-              request.getServletContext().setAttribute("materialList", Initializer.initMaterialList());
-          }
-          if (request.getServletContext().getAttribute("measurementList") == null){
-              request.getServletContext().setAttribute("measurementList", Initializer.getMeasurementShedWidth());
-          }
-          if (request.getServletContext().getAttribute("measurementList") == null){
-              request.getServletContext().setAttribute("measurementList", Initializer.getMeasurementShedLength());
-          }
-          if (request.getServletContext().getAttribute("measurementList") == null){
-              request.getServletContext().setAttribute("measurementList", Initializer.getMeasurementWidth());
-          }
-          if (request.getServletContext().getAttribute("measurementList") == null){
-              request.getServletContext().setAttribute("measurementList", Initializer.getMeasurementLength());
-          }*/
-    %>
+    <!-- Stylesheet -->
+    <link rel = "stylesheet"
+          type = "text/css"
+          href = "css/dropdown.css" />
 
-    <%  String besked = (String) request.getAttribute("message");
-        String status = (String) request.getAttribute("status");
-        if (besked != null && status != null) {
-            String alert = "";
-            if (status.equals("ok")) {
-                alert = "<div class=\"alert alert-success\">_message_</div>";
-            } else {
-                alert = "<div class=\"alert alert-danger\">_message_</div>";
-            }
-            alert = alert.replace("_message_", besked);
-            out.println(alert);
-        }
+    <%
+
     %>
 
     <title>Carport design</title>
 </head>
 <body>
+<h1>Lav din egen carport</h1>
 
-Her kan du designe din egen carport med dine egne mål og tilføjelser.<br>
+Her kan du designe din egen carport med dine egne mål og tilføjelser.
 Vælg nedenfor hvilke ting du ønsker til din carport:
+Med skur uden taghældning
 
 <!-- Dropdowns -->
 
 <form action="FrontController" method="post">
-    <input type="hidden" name="target" value="custom">
-
-    <div class="btn-group-vertical">
+    <input type="hidden" name="target" value="customOrderWithShed">
 
     <div class="row mt-4">
+
         <div class="col-md-5 school-options-dropdown text-center">
             <div class="form-group">
                 <label>Vælg Carport længde:</label>
@@ -96,6 +73,30 @@ Vælg nedenfor hvilke ting du ønsker til din carport:
 
         <div class="col-md-5 school-options-dropdown text-center">
             <div class="form-group">
+                <label>Vælg længde på skur:</label>
+                <select class="form-control" name="del 3">
+                    <option selected disabled>Skur længde</option>
+                    <c:forEach var="measureShedLength" items="${applicationScope.measurementList}">
+                        <option name="del 3">${measureShedLength.measurement}</option>
+                    </c:forEach>
+                </select>
+            </div>
+        </div>
+
+        <div class="col-md-5 school-options-dropdown text-center">
+            <div class="form-group">
+                <label>Vælg bredde på skur:</label>
+                <select class="form-control" name="del 4">
+                    <option selected disabled>Skur bredde</option>
+                    <c:forEach var="measureShedWidth" items="${applicationScope.measurementList}">
+                        <option name="del 4">${measureShedWidth.measurement}</option>
+                    </c:forEach>
+                </select>
+            </div>
+        </div>
+
+        <div class="col-md-5 school-options-dropdown text-center">
+            <div class="form-group">
                 <label>Vælg materiale til carport</label>
                 <select class="form-control" name="del 5">
                     <option selected disabled>Carport materiale</option>
@@ -106,23 +107,36 @@ Vælg nedenfor hvilke ting du ønsker til din carport:
             </div>
         </div>
 
+
+
         <div class="col-md-5 school-options-dropdown text-center">
             <div class="form-group">
                 <label>Vælg materiale til tag</label>
                 <select class="form-control" name="del 5">
                     <option selected disabled>Carport tag materiale</option>
                     <c:forEach var="material" items="${applicationScope.materialList}">
-                        <option name="del 5">${material.name}</option>
+                    <option name="del 5">${material.name}</option>
                     </c:forEach>
-                </select>
             </div>
         </div>
+
+        <div class="col-md-5 school-options-dropdown text-center">
+            <div class="form-group">
+                <label>Vælg tag hældning</label>
+                <select class="form-control" name="del 5">
+                    <option selected disabled>Tag hældning</option>
+                    <c:forEach var="material" items="${applicationScope.materialList}">
+                    <option name="del 5">${material.name}</option>
+                    </c:forEach>
+            </div>
+        </div>
+
     </div>
 
     <b2> Indtast personlige oplysninger, så vi kan sende dig et tilbud</b2>
 
-        <div class="col-md-5 school-options-dropdown text-center">
-            <div class="form-group">
+    <div class="col-md-5 school-options-dropdown text-center">
+        <form action="/action_page.php">
             <label for="name">Navn:</label><br>
             <input type="text" id="name" name="name" value="navn"><br>
             <label for="email">Email:</label><br>
@@ -130,15 +144,17 @@ Vælg nedenfor hvilke ting du ønsker til din carport:
         </form>
     </div>
 
-    <div class="col-md-5 school-options-dropdown text-center">
+    <div class="col-md-4 text-center mt-3 mb-3">
         <a href="FrontController?target=redirect&destination=receipt"
            button type="submit" class="btn btn-dark mt-4 mb-3">Bestil</a>
     </div>
+
     </div>
 </form>
 </div>
 
+
+
 </body>
 <!-- Footer -->
 <%@include file="/header/footer.inc"%>
-</html>
