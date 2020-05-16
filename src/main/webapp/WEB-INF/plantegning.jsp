@@ -24,6 +24,30 @@
 </head>
 <body>
 Her kommer plantegningen af din carport
+<svg  xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      width="780" height="600" viewBox="-100 80 900 500">
+    <rect x="-100" y="-20" height="1000" width="900"
+          style="stroke:white; fill: white"/>
+    <rect x="0" y="0" height="600" width="780"
+          style="stroke:black; fill: white"/>
+    <!--Spær-->
+    <rect x="0" y="0" height="600" width="7"
+          style="stroke:black; fill: none"/>
+    <rect x="771" y="0" height="600" width="7"
+          style="stroke:black; fill: none"/>
+    <!--Remme-->
+    <rect x="7" y="30" height="7" width="763"
+          style="stroke:black; fill: none"/>
+    <rect x="7" y="570" height="7" width="763"
+          style="stroke:black; fill: none"/>
+    <!--Krydset-->
+    <line x1="7"  y1="30" x2="600"   y2="570"
+          style="stroke:black; stroke-dasharray: 10 5"/>
+    <line x1="50"  y1="570" x2="600"   y2="30"
+          style="stroke:black; stroke-dasharray: 10 5"/>
+    <!--Stolperne-->
+    <rect x="48" y="28" height="12" wid
 
 </body>
 
