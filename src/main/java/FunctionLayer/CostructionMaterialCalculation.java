@@ -1,10 +1,13 @@
 package FunctionLayer;
 
+import PresentationLayer.CustomOrderWithShed;
+
 import java.util.ArrayList;
 
 public class CostructionMaterialCalculation {
 
     ConstructionSizeCalculation constructionSizeCalculation = new ConstructionSizeCalculation();
+
 
     //skal måske sættes i egen metode?
     public ArrayList woodMaterialCalculator() {
