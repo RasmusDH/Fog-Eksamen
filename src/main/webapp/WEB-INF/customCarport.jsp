@@ -39,6 +39,9 @@
           if (request.getServletContext().getAttribute("measurementList") == null){
               request.getServletContext().setAttribute("measurementList", Initializer.getMeasurementLength());
           }*/
+        if (request.getServletContext().getAttribute("roofList") == null){
+            request.getServletContext().setAttribute("roofList", Initializer.initRoofList());
+        }
     %>
 
     <%  String besked = (String) request.getAttribute("message");
@@ -67,41 +70,55 @@ Vælg nedenfor hvilke ting du ønsker til din carport:
 <form action="FrontController" method="post">
     <input type="hidden" name="target" value="custom">
 
-    <div class="btn-group-vertical">
-
     <div class="row mt-4">
+
         <div class="col-md-5 school-options-dropdown text-center">
             <div class="form-group">
-                <label>Vælg Carport længde:</label>
-                <select class="form-control" name="del 1">
-                    <option selected disabled>Carport længde</option>
-                    <c:forEach var="measureLength" items="${applicationScope.measurementList}">
-                        <option name="del 1">${measureLength.measurement}</option>
-                    </c:forEach>
+                <label>Vælg længde</label>
+                <select name="quantity" class="form-control">
+                    <option selected disabled>Vælg længde </option>
+                    <option value="1">120</option>
+                    <option value="2">160</option>
+                    <option value="3">200</option>
+                    <option value="4">220</option>
+                    <option value="5">260</option>
+                    <option value="6">300</option>
+                    <option value="7">320</option>
+                    <option value="8">360</option>
+                    <option value="9">400</option>
+                    <option value="10">420</option>
+                </select>
+            </div>
+        </div>
+
+
+        <div class="col-md-5 school-options-dropdown text-center">
+            <div class="form-group">
+                <label>Vælg bredde</label>
+                <select name="quantity" class="form-control">
+                    <option selected disabled>Vælg bredde </option>
+                    <option value="1">120</option>
+                    <option value="2">160</option>
+                    <option value="3">200</option>
+                    <option value="4">220</option>
+                    <option value="5">260</option>
+                    <option value="6">300</option>
+                    <option value="7">320</option>
+                    <option value="8">360</option>
+                    <option value="9">400</option>
+                    <option value="10">420</option>
                 </select>
             </div>
         </div>
 
         <div class="col-md-5 school-options-dropdown text-center">
             <div class="form-group">
-                <label>Vælg Carport bredde:</label>
-                <select class="form-control" name="del 2">
-                    <option selected disabled>Carport bredde</option>
-                    <c:forEach var="measureWidth" items="${applicationScope.measurementList}">
-                        <option name="del 2">${measureWidth.measurement}</option>
-                    </c:forEach>
-                </select>
-            </div>
-        </div>
-
-        <div class="col-md-5 school-options-dropdown text-center">
-            <div class="form-group">
-                <label>Vælg materiale til carport</label>
-                <select class="form-control" name="del 5">
-                    <option selected disabled>Carport materiale</option>
-                    <c:forEach var="material" items="${applicationScope.materialList}">
-                        <option name="del 5">${material.name}</option>
-                    </c:forEach>
+                <label>Vælg materiale</label>
+                <select name="quantity" class="form-control">
+                    <option selected disabled>Vælg materiale </option>
+                    <option value="1">Mahogany</option>
+                    <option value="2">Eg</option>
+                    <option value="3">Birk</option>
                 </select>
             </div>
         </div>
@@ -109,33 +126,44 @@ Vælg nedenfor hvilke ting du ønsker til din carport:
         <div class="col-md-5 school-options-dropdown text-center">
             <div class="form-group">
                 <label>Vælg materiale til tag</label>
-                <select class="form-control" name="del 5">
-                    <option selected disabled>Carport tag materiale</option>
-                    <c:forEach var="material" items="${applicationScope.materialList}">
-                        <option name="del 5">${material.name}</option>
-                    </c:forEach>
+                <select name="quantity" class="form-control">
+                    <option selected disabled>Vælg materiale </option>
+                    <option value="1">Plastik</option>
+                    <option value="2">Metal</option>
                 </select>
             </div>
         </div>
-    </div>
-
-    <b2> Indtast personlige oplysninger, så vi kan sende dig et tilbud</b2>
 
         <div class="col-md-5 school-options-dropdown text-center">
             <div class="form-group">
-            <label for="name">Navn:</label><br>
-            <input type="text" id="name" name="name" value="navn"><br>
-            <label for="email">Email:</label><br>
-            <input type="text" id="email" name="email" value="email"><br><br>
-        </form>
+                <label>Vælg hældning på tag:</label>
+                <select class="form-control" name="slope">
+                <option selected disabled>Hældning</option>
+             <c:forEach var="slope" items="${applicationScope.roofList}">
+               <option name="del 7">${slope.slope}</option>
+             </c:forEach></select>
+
+    </div>
+        </div>
     </div>
 
-    <div class="col-md-5 school-options-dropdown text-center">
+
+    <b2> Indtast personlige oplysninger, så vi kan sende dig et tilbud</b2>
+    <div class="row mt-3">
+
+        <div class="col-md-5 text-center">
+            <div class="form-group">
+            <label for="name">Navn</label><br>
+            <input type="text" id="name" name="name" value=""><br>
+            <label for="email">Email</label><br>
+            <input type="text" id="email" name="email" value=""><br><br>
+    </div>
+
+        <div class="col-md-5 text-center">
         <a href="FrontController?target=redirect&destination=receipt"
            button type="submit" class="btn btn-dark mt-4 mb-3">Bestil</a>
     </div>
     </div>
-</form>
 </div>
 
 </body>

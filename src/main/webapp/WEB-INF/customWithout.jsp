@@ -49,87 +49,66 @@ Med skur uden taghældning
 
         <div class="col-md-5 school-options-dropdown text-center">
             <div class="form-group">
-                <label>Vælg Carport længde:</label>
-                <select class="form-control" name="del 1">
-                    <option selected disabled>Carport længde</option>
-                    <c:forEach var="measureLength" items="${applicationScope.measurementList}">
-                        <option name="del 1">${measureLength.measurement}</option>
-                    </c:forEach>
+                <label>Vælg længde</label>
+                <select name="quantity" class="form-control">
+                    <option selected disabled>Vælg længde </option>
+                    <option value="1">120</option>
+                    <option value="2">160</option>
+                    <option value="3">200</option>
+                    <option value="4">220</option>
+                    <option value="5">260</option>
+                    <option value="6">300</option>
+                    <option value="7">320</option>
+                    <option value="8">360</option>
+                    <option value="9">400</option>
+                    <option value="10">420</option>
+                </select>
+            </div>
+        </div>
+
+
+        <div class="col-md-5 school-options-dropdown text-center">
+            <div class="form-group">
+                <label>Vælg bredde</label>
+                <select name="quantity" class="form-control">
+                    <option selected disabled>Vælg bredde </option>
+                    <option value="1">120</option>
+                    <option value="2">160</option>
+                    <option value="3">200</option>
+                    <option value="4">220</option>
+                    <option value="5">260</option>
+                    <option value="6">300</option>
+                    <option value="7">320</option>
+                    <option value="8">360</option>
+                    <option value="9">400</option>
+                    <option value="10">420</option>
                 </select>
             </div>
         </div>
 
         <div class="col-md-5 school-options-dropdown text-center">
             <div class="form-group">
-                <label>Vælg Carport bredde:</label>
-                <select class="form-control" name="del 2">
-                    <option selected disabled>Carport bredde</option>
-                    <c:forEach var="measureWidth" items="${applicationScope.measurementList}">
-                        <option name="del 2">${measureWidth.measurement}</option>
-                    </c:forEach>
+                <label>Vælg materiale</label>
+                <select name="quantity" class="form-control">
+                    <option selected disabled>Vælg materiale </option>
+                    <option value="1">Mahogany</option>
+                    <option value="2">Eg</option>
+                    <option value="3">Birk</option>
                 </select>
             </div>
         </div>
-
-        <div class="col-md-5 school-options-dropdown text-center">
-            <div class="form-group">
-                <label>Vælg længde på skur:</label>
-                <select class="form-control" name="del 3">
-                    <option selected disabled>Skur længde</option>
-                    <c:forEach var="measureShedLength" items="${applicationScope.measurementList}">
-                        <option name="del 3">${measureShedLength.measurement}</option>
-                    </c:forEach>
-                </select>
-            </div>
-        </div>
-
-        <div class="col-md-5 school-options-dropdown text-center">
-            <div class="form-group">
-                <label>Vælg bredde på skur:</label>
-                <select class="form-control" name="del 4">
-                    <option selected disabled>Skur bredde</option>
-                    <c:forEach var="measureShedWidth" items="${applicationScope.measurementList}">
-                        <option name="del 4">${measureShedWidth.measurement}</option>
-                    </c:forEach>
-                </select>
-            </div>
-        </div>
-
-        <div class="col-md-5 school-options-dropdown text-center">
-            <div class="form-group">
-                <label>Vælg materiale til carport</label>
-                <select class="form-control" name="del 5">
-                    <option selected disabled>Carport materiale</option>
-                    <c:forEach var="material" items="${applicationScope.materialList}">
-                        <option name="del 5">${material.name}</option>
-                    </c:forEach>
-                </select>
-            </div>
-        </div>
-
-
 
         <div class="col-md-5 school-options-dropdown text-center">
             <div class="form-group">
                 <label>Vælg materiale til tag</label>
-                <select class="form-control" name="del 5">
-                    <option selected disabled>Carport tag materiale</option>
-                    <c:forEach var="material" items="${applicationScope.materialList}">
-                    <option name="del 5">${material.name}</option>
-                    </c:forEach>
+                <select name="quantity" class="form-control">
+                    <option selected disabled>Vælg materiale </option>
+                    <option value="1">Plastik</option>
+                    <option value="2">Metal</option>
+                </select>
             </div>
         </div>
-
-        <div class="col-md-5 school-options-dropdown text-center">
-            <div class="form-group">
-                <label>Vælg tag hældning</label>
-                <select class="form-control" name="del 5">
-                    <option selected disabled>Tag hældning</option>
-                    <c:forEach var="material" items="${applicationScope.materialList}">
-                    <option name="del 5">${material.name}</option>
-                    </c:forEach>
-            </div>
-        </div>
+    </div>
 
     </div>
 

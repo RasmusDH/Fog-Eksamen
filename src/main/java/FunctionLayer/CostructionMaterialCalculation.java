@@ -67,10 +67,11 @@ public class CostructionMaterialCalculation {
         woodMaterials.add(rem);
     }
 
-    return woodMaterials;
-    }
-
+    
  */
+
+return woodMaterials;
+    }
 }
 
 

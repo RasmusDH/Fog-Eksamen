@@ -23,7 +23,7 @@
     <title>Plantegning</title>
 </head>
 <body>
-Her kommer plantegningen af din carport
+
 <svg  xmlns="http://www.w3.org/2000/svg"
       xmlns:xlink="http://www.w3.org/1999/xlink"
       width="780" height="600" viewBox="-100 80 900 500">
@@ -50,6 +50,11 @@ Her kommer plantegningen af din carport
     <rect x="48" y="28" height="12" wid
 
 </body>
+    <div class="col-md-6 text-center">
+        <a href="FrontController?target=redirect&destination=receipt"
+           class="btn btn-dark mt-4" role="button" aria-pressed="true">Tilbage</a>
+    </div>
+
 
 <!-- Footer -->
 <%@include file="/header/footer.inc"%>
