@@ -23,13 +23,14 @@ Kunne du tænke dig at se plantegningen af carporten kan du se et udkast nedenfo
                class="btn btn-dark mt-4" role="button" aria-pressed="true">Se plantegning af carport</a>
         </div>
 <br>
+<div>
 
         <form name="goBack" action="FrontController" method="POST">
             <input type="hidden" name="target" value="goBack">
             <button id="recieptGoBackTwo" class="btn btn-dark mt-4" type="submit" value="Tilbage">Tilbage</button>
         </form>
 
-
+</div>
 </div>
 </body>
 </html>
