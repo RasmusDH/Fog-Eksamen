@@ -46,7 +46,7 @@ public class Initializer {
             measurementShedWidth = MeasurementMapper.getMeasurementsShedWidth(shedWitdh);
         }
     }
-
+*/
     public static List<Roof> initRoofList() {
         if (roofList == null){
             try {
@@ -70,5 +70,4 @@ public class Initializer {
     public static List<Measurement> getMeasurementShedLength(){
         return measurementShedLength;
     }
-*/
 }

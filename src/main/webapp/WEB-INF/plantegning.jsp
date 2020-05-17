@@ -23,7 +23,7 @@
     <title>Plantegning</title>
 </head>
 <body>
-Her kommer plantegningen af din carport
+
 <svg  xmlns="http://www.w3.org/2000/svg"
       xmlns:xlink="http://www.w3.org/1999/xlink"
       width="780" height="600" viewBox="-100 80 900 500">

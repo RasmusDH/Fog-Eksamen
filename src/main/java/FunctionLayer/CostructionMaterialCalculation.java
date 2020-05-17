@@ -3,7 +3,7 @@ package FunctionLayer;
 import PresentationLayer.CustomOrderWithShed;
 
 import java.util.ArrayList;
-
+/*
 public class CostructionMaterialCalculation {
 
     ConstructionSizeCalculation constructionSizeCalculation = new ConstructionSizeCalculation();
@@ -66,9 +66,9 @@ public class CostructionMaterialCalculation {
         rem.setComment("Rem montores ovenpå stolperne");
         woodMaterials.add(rem);
     }
-*/
-    return woodMaterials;
+
+return woodMaterials;
     }
 }
-
+*/
 
