@@ -66,9 +66,11 @@ public class CostructionMaterialCalculation {
         rem.setComment("Rem montores ovenpå stolperne");
         woodMaterials.add(rem);
     }
-*/
+
     return woodMaterials;
     }
+
+ */
 }
 
 
