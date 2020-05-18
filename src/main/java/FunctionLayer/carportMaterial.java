@@ -6,18 +6,33 @@ public class carportMaterial {
     String unit;
     int id;
     int width;
+    double thickness;
     int size;
     int amount;
     String comment;
 
-    public carportMaterial(String name, String unit, int id, int width, int size, int amount, String comment) {
+    public carportMaterial(String name, String unit, int id, int width, double thickness, int size, int amount, String comment) {
         this.name = name;
         this.unit = unit;
         this.id = id;
         this.width = width;
+        this.thickness = thickness;
         this.size = size;
         this.amount = amount;
         this.comment = comment;
+    }
+    public carportMaterial(String name, int size, int id) {
+        this.name = name;
+        this.size = size;
+        this.id = id;
+    }
+
+    public double getThickness() {
+        return thickness;
+    }
+
+    public void setThickness(double thickness) {
+        this.thickness = thickness;
     }
 
     public String getName() {
