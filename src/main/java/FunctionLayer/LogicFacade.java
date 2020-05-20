@@ -1,12 +1,9 @@
-package FunctionLayer;
+/*package FunctionLayer;
 
 import DBAccess.UserMapper;
 import DBAccess.ConstructionMaterialMapper;
 
-/**
- * The purpose of LogicFacade is to...
- * @author kasper
- */
+
 public class LogicFacade {
 
     public static User login( String email, String password ) throws LoginSampleException {
@@ -36,3 +33,4 @@ public class LogicFacade {
 
 
 }
+*/

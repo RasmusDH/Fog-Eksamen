@@ -34,6 +34,14 @@
     <!--Spær-->
     <rect x="0" y="0" height="600" width="7"
           style="stroke:black; fill: none"/>
+    <rect x="154" y="0" height="600" width="7"
+          style="stroke:black; fill: none"/>
+    <rect x="308" y="0" height="600" width="7"
+          style="stroke:black; fill: none"/>
+    <rect x="462" y="0" height="600" width="7"
+          style="stroke:black; fill: none"/>
+    <rect x="616" y="0" height="600" width="7"
+          style="stroke:black; fill: none"/>
     <rect x="771" y="0" height="600" width="7"
           style="stroke:black; fill: none"/>
     <!--Remme-->
