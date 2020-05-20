@@ -1,74 +1,57 @@
 package FunctionLayer;
 
-import PresentationLayer.CustomOrderWithShed;
-
 import java.util.ArrayList;
 
 public class CostructionMaterialCalculation {
 
     ConstructionSizeCalculation constructionSizeCalculation = new ConstructionSizeCalculation();
 
-
-    //skal måske sættes i egen metode?
-    public ArrayList woodMaterialCalculator() {
-        ArrayList<carportMaterial> woodMaterials = new ArrayList<>();
+    public ArrayList woodMaterialCalculator(CarportConstruction carportConstruction) throws LoginSampleException {
+        ArrayList<CarportMaterial> woodMaterials = new ArrayList<>();
 
         //Spaer
         int amount = constructionSizeCalculation.roofSpaerAmount(carportConstruction);
         int size = constructionSizeCalculation.roofSpaerLength(carportConstruction);
-        carportMaterial spær = null;
+        CarportMaterial spær = null;
         for (int i = 0; i < amount; i++) {
-            spær = LogicFacade.getMaterialBySize(size);
             spær.setName("SPÆRTRE UBEHANDLET");
-            spær.setUnit(LogicFacade.getUnitByName(spær.getName()));
-            spær.setWidth(LogicFacade.getWidthById(spær.getId(), spær.getName()));
-            spær.setThickness(LogicFacade.getThicknessByID(spær.getId()));
+            spær = LogicFacade.getMaterialBySizeAndName(size, spær.getName());
             spær.setName("SPÆRTRÆ UBEHANDLET" + spær.getThickness() + "x" + spær.getWidth());
             spær.setSize(size);
             spær.setAmount(amount);
-
             spær.setComment("Spær skal monteres på rem");
             woodMaterials.add(spær);
 
         }
 
-/*
-   //stolper
-    int amount = constructionSizeCalculation.pillarAmount(carportConstruction);
-    carportMaterial stolper = null;
-    for (int i = 0; i < amount; i++) {
-        stolper = LogicFacade.getPillarMaterial;
-        stolper.setName("STOLPETRÆ");
-        stolper.setUnit(LogicFacade.getUnitByName(stolper.getName()));
-            stolper.setLength(LogicFacade.getLengthById(stolper.getId(), stolper.getName()));
-            stolper.setThickness(LogicFacade.getThicknessById(stolper.getId()));
-            stolper.setName("STOLPETRÆ" + stolper.getThickness() + "x" + stolper.getLength());
-        stolper.setAmount(amount);
 
+   //stolper
+    amount = constructionSizeCalculation.pillarAmount(carportConstruction);
+        size = 300;
+    CarportMaterial stolper = null;
+    for (int i = 0; i < amount; i++) {
+        stolper.setName("STOLPETRÆ");
+        stolper = LogicFacade.getPillarMaterial(stolper.getName());
+        stolper.setName("STOLPETRÆ" + stolper.getThickness() + "x" + stolper.getWidth());
+        stolper.setAmount(amount);
         stolper.setComment("Stolper skal graves 90 cm ned i jorden");
         woodMaterials.add(stolper);
 
     }
 
     //rem
-    int amount = constructionSizeCalculation.stropAmount(carportConstruction);
-    int size = constructionSizeCalculation.stropLength(carportConstruction);
-    carportMaterial rem = null;
+    amount = constructionSizeCalculation.stropAmount(carportConstruction);
+    size = constructionSizeCalculation.stropLength(carportConstruction);
+    CarportMaterial rem = null;
     for (int i = 0; i < amount; i++) {
-        rem = LogicFacade.getStropMaterial;
         rem.setName("REMTRÆ");
-        rem.setUnit(LogicFacade.getUnitByName(rem.getName()));
-            rem.setWidth(LogicFacade.getWidthById(rem.getId(), rem.getName()));
-            rem.setThickness(LogicFacade.getThicknessById(rem.getId()));
-            rem.setName("REMTRÆ" + rem.getThickness() + "x" + rem.getLength());
+        rem = LogicFacade.getStropMaterialByNameAndSize(rem.getName(), size);
+        rem.setName("REMTRÆ" + rem.getThickness() + "x" + rem.getWidth());
         rem.setAmount(amount);
-
         rem.setComment("Rem montores ovenpå stolperne");
         woodMaterials.add(rem);
     }
 
-
- */
 
 return woodMaterials;
     }
