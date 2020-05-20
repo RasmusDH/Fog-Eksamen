@@ -25,4 +25,5 @@ public class RequestFacade {
     public static Order getRequest4Styklist(int id) throws LoginSampleException {
         return OrderMapper.getRequest4Styklist(id);
     }
-}*/
+}
+*/
