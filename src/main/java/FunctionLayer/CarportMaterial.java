@@ -1,6 +1,6 @@
 package FunctionLayer;
 
-public class carportMaterial {
+public class CarportMaterial {
 
     String name;
     String unit;
@@ -11,7 +11,7 @@ public class carportMaterial {
     int amount;
     String comment;
 
-    public carportMaterial(String name, String unit, int id, int width, double thickness, int size, int amount, String comment) {
+    public CarportMaterial(String name, String unit, int id, int width, double thickness, int size, int amount, String comment) {
         this.name = name;
         this.unit = unit;
         this.id = id;
@@ -21,7 +21,7 @@ public class carportMaterial {
         this.amount = amount;
         this.comment = comment;
     }
-    public carportMaterial(String name, int size, int id) {
+    public CarportMaterial(String name, int size, int id) {
         this.name = name;
         this.size = size;
         this.id = id;

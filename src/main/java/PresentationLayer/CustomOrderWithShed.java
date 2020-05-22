@@ -13,6 +13,7 @@ public class CustomOrderWithShed extends Command {
     private String shedWidth = "shed width";
     private String shedLength = "shed length";
     static CarportConstruction carportConstruction = null;
+
     @Override
     String execute(HttpServletRequest request, HttpServletResponse response) {
         HttpSession session = request.getSession();

@@ -1,12 +1,15 @@
-/*package FunctionLayer;
+package FunctionLayer;
 
-import DBAccess.UserMapper;
 import DBAccess.ConstructionMaterialMapper;
+import DBAccess.UserMapper;
 
 
 public class LogicFacade {
 
-    public static User login( String email, String password ) throws LoginSampleException {
+
+
+
+    public static User login(String email, String password ) throws LoginSampleException {
         return UserMapper.login( email, password );
     } 
 
@@ -15,22 +18,17 @@ public class LogicFacade {
         UserMapper.createUser( user );
         return user;
     }
-    public static carportMaterial getMaterialBySize(int size) {
-        carportMaterial carportMaterial = new carportMaterial(size);
-
+    public static CarportMaterial getMaterialBySizeAndName(int size, String name) throws LoginSampleException {
+        return ConstructionMaterialMapper.getMaterialBySize(size, name);
     }
-    public static carportMaterial getUnitByName(String name) {
-
+    public static CarportMaterial getPillarMaterial(String name) throws LoginSampleException {
+        return ConstructionMaterialMapper.getMaterialByName(name);
     }
-    public static carportMaterial getWidthById(int id) {
-
-    }
-    public static carportMaterial getThicknessByID(int id, String name) {
-
+    public static CarportMaterial getStropMaterialByNameAndSize(String name, int size) throws LoginSampleException {
+        return ConstructionMaterialMapper.getMaterialBySize(size, name);
     }
 
 
 
 
 }
-*/
