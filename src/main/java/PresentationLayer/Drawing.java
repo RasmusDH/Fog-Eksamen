@@ -22,6 +22,23 @@ public class Drawing extends Command {
             svg.addRect(x, 35, 4, 500);
         }
 
+        //stolper
+        int antalStolper = 4;
+        int afstandMellemStolper = 420;
+
+        for (int x = 0; x < antalStolper; x += afstandMellemSpaer ) {
+            svg.addRect(x, 35, 4, 420);
+        }
+
+        //remme
+        int antalRemme = 2;
+        int længdeRemme = afstandMellemStolper;
+
+        for (int x = 0; x < antalRemme; x += længdeRemme ) {
+            svg.addRect(x, 35, 4, 500);
+        }
+
+
         request.setAttribute("svgdrawing", svg.toString());
         return "drawing";
     }
