@@ -48,7 +48,8 @@ public class ConstructionMaterialMapper {
                     double thickness = rs.getDouble("thickness");
                     String comment = null;
                     int amount = 0;
-                    CarportMaterial carportMaterial = new CarportMaterial(name, unit, id, width, thickness, size, amount, comment);
+                    int orderId = 0;
+                    CarportMaterial carportMaterial = new CarportMaterial(orderId, name, unit, id, width, thickness, size, amount, comment);
                     return carportMaterial;
                 }
                 else {
@@ -75,8 +76,9 @@ public class ConstructionMaterialMapper {
                 double thickness = rs.getDouble("thickness");
                 String comment = null;
                 int amount = 0;
+                int orderId = 0;
                 int size = rs.getInt("length");
-                CarportMaterial carportMaterial = new CarportMaterial(name, unit, id, width, thickness, size, amount, comment);
+                CarportMaterial carportMaterial = new CarportMaterial(orderId, name, unit, id, width, thickness, size, amount, comment);
                 return carportMaterial;
             } else {
                 throw new LoginSampleException("Kunne ikke finde materialet.");

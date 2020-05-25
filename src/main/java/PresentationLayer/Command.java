@@ -14,7 +14,7 @@ abstract class Command {
         commands.put( "login", new Login() );
         commands.put( "register", new Register() );
         commands.put("redirect", new Redirect());
-        commands.put("customOrderWithShed", new CustomOrderWithShed());
+        commands.put("customWithout", new CustomWithout());
         commands.put( "drawing", new Drawing());
         commands.put("receipt", new Receipt());
     }

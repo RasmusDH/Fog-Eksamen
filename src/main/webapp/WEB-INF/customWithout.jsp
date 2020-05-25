@@ -50,7 +50,7 @@ Med skur uden taghældning
         <div class="col-md-5 school-options-dropdown text-center">
             <div class="form-group">
                 <label>Vælg længde</label>
-                <select name="quantity" class="form-control">
+                <select name="length" class="form-control">
                     <option selected disabled>Vælg længde </option>
                     <option value="1">120</option>
                     <option value="2">160</option>
@@ -70,7 +70,7 @@ Med skur uden taghældning
         <div class="col-md-5 school-options-dropdown text-center">
             <div class="form-group">
                 <label>Vælg bredde</label>
-                <select name="quantity" class="form-control">
+                <select name="width" class="form-control">
                     <option selected disabled>Vælg bredde </option>
                     <option value="1">120</option>
                     <option value="2">160</option>
@@ -86,28 +86,7 @@ Med skur uden taghældning
             </div>
         </div>
 
-        <div class="col-md-5 school-options-dropdown text-center">
-            <div class="form-group">
-                <label>Vælg materiale</label>
-                <select name="quantity" class="form-control">
-                    <option selected disabled>Vælg materiale </option>
-                    <option value="1">Mahogany</option>
-                    <option value="2">Eg</option>
-                    <option value="3">Birk</option>
-                </select>
-            </div>
-        </div>
 
-        <div class="col-md-5 school-options-dropdown text-center">
-            <div class="form-group">
-                <label>Vælg materiale til tag</label>
-                <select name="quantity" class="form-control">
-                    <option selected disabled>Vælg materiale </option>
-                    <option value="1">Plastik</option>
-                    <option value="2">Metal</option>
-                </select>
-            </div>
-        </div>
     </div>
 
     </div>

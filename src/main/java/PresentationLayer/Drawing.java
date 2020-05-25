@@ -11,7 +11,7 @@ public class Drawing extends Command {
     String execute(HttpServletRequest request, HttpServletResponse response) throws LoginSampleException {
         Svg svg = new Svg(800, 600, "0,0,800,600",0,0);
         Svg svgInnerDrawing = new Svg(900,800,"0,0,900,800",0,0);
-        svg.addRect(x, 0, 600, 780);
+        //svg.addRect(x, 0, 600, 780);
 
         // Spær
 
