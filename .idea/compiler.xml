@@ -19,7 +19,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="FOG-CarportProjekt" options="-endorseddirs $USER_HOME$/Downloads/Fog-Eksamen/target/endorsed" />
-      <module name="Fog-Eksamen" options="-endorseddirs $PROJECT_DIR$/target/endorsed" />
+      <module name="Fog-Eksamen" options="-endorseddirs C:\Users\Rasmus\IdeaProjects\Fog-Eksamen\target/endorsed" />
       <module name="Fog-Eksamen-master" options="-endorseddirs $USER_HOME$/Downloads/Fog-Eksamen/target/endorsed" />
       <module name="ProjektSkabelon-master" options="-endorseddirs &quot;$USER_HOME$/Downloads/Fog-Eksamen/target/endorsed&quot;" />
       <module name="Projektskabelon" options="-endorseddirs $USER_HOME$/Downloads/Fog-Eksamen/target/endorsed" />

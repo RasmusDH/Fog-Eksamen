@@ -1,5 +1,8 @@
 package FunctionLayer;
 
+/**
+ *
+ */
 public class ConstructionSizeCalculation {
 
     public int roofSpaerLength (CarportConstruction carportConstruction) {
@@ -35,9 +38,6 @@ public class ConstructionSizeCalculation {
     }
 
     public int roofSpaerAmount (CarportConstruction carportConstruction) {
-        //todo return number of spaer that will be needed for the entire carport length
-        //todo in ConstructionMaterialCalculation write method that returns two materials of beslag
-        // - one for the left side and one for the right side with the number of spaer and material that is the beslag
 
         // Max 500 mm between each spaer
         int carportLength = carportConstruction.getCarportLength()*10;

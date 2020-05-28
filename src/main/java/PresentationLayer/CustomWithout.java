@@ -21,9 +21,7 @@ public class CustomWithout extends Command {
     String execute(HttpServletRequest request, HttpServletResponse response) throws LoginSampleException {
         HttpSession session = request.getSession();
 
-        // Vi får "kurv" fra login
-        //Orderlist orderlist = (Orderlist) session.getAttribute("kurv");
-
+        int orderId = 0;
         int carportLength = Integer.parseInt(request.getParameter("length"));
         int carportWidth = Integer.parseInt(request.getParameter("width"));
         String name = request.getParameter("name");
@@ -64,7 +62,7 @@ public class CustomWithout extends Command {
 
 
             LocalDate orderDate = LocalDate.now();
-            int orderId = 2;
+            
 
             carportConstruction = new CarportConstruction(carportLength, carportWidth);
 
