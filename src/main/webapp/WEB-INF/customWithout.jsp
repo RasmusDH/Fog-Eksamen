@@ -39,6 +39,19 @@
 Her kan du designe din egen carport med dine egne mål og tilføjelser.
 Vælg nedenfor hvilke ting du ønsker til din carport:
 Med skur uden taghældning
+<%  String besked = (String) request.getAttribute("message");
+    String status = (String) request.getAttribute("status");
+    if (besked != null && status != null) {
+        String alert = "";
+        if (status.equals("ok")) {
+            alert = "<div class=\"alert alert-success\">_message_</div>";
+        } else {
+            alert = "<div class=\"alert alert-danger\">_message_</div>";
+        }
+        alert = alert.replace("_message_", besked);
+        out.println(alert);
+    }
+%>
 
 <!-- Dropdowns -->
 

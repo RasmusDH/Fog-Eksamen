@@ -57,6 +57,7 @@ public class CustomWithout extends Command {
                     String.format("Du mangler at vælge et mål!",
                             carportLength, carportWidth));
         }
+        else
             session.setAttribute("carportLength", carportLength);
             session.setAttribute("carportWidth", carportWidth);
 
