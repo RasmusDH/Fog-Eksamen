@@ -51,11 +51,11 @@ public class CustomWithout extends Command {
             //int quantity = Integer.parseInt(antal);
 
 */
-        if (carportLength == 0) {
+        if (carportLength == 0 || carportWidth == 0) {
             request.setAttribute("status", "error");
             request.setAttribute("message",
                     String.format("Du mangler at vælge et mål!",
-                            carportLength));
+                            carportLength, carportWidth));
         }
             session.setAttribute("carportLength", carportLength);
             session.setAttribute("carportWidth", carportWidth);
