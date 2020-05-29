@@ -12,6 +12,11 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.Date;
 
+/**
+ * Indeholder metoder som henter fra databasen med vores ordrer.
+ *
+ */
+
 public class OrderMapper {
     public static ArrayList<Order> getOrders() {
 

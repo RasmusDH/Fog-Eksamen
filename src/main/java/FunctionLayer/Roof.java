@@ -1,5 +1,9 @@
 package FunctionLayer;
 
+/**
+ * Vi laver et roof-objekt som vi kan bruge til at kalde på vores tag valgmuligheder i vores dropdown menu.
+ */
+
 public class Roof {
 
     private String kind;

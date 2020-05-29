@@ -5,8 +5,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 /**
- The purpose of Connector is to...
-
+ Vi anvender connectoren til at hente fra vores SQL database.
  @author kasper
  */
 public class Connector {
@@ -24,7 +23,7 @@ public class Connector {
     public static Connection connection() throws ClassNotFoundException, SQLException {
         if ((singleton == null) || singleton.isClosed()) {
             //setDBCredentials();
-            URL = "jdbc:mysql://localhost:3306/fog?serverTimezone=UTC&allowPublicKeyRetrieval=" + "true&useSSL=false";
+            URL = "jdbc:mysql://64.227.122.67:3306/fog?serverTimezone=UTC&allowPublicKeyRetrieval=" + "true&useSSL=false";
             USERNAME = "root";
             PASSWORD = "#Magicalrabbit326";
             Class.forName( "com.mysql.cj.jdbc.Driver" );
